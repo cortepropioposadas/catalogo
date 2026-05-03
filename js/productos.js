@@ -9,7 +9,7 @@ const productos = [
         precioPack: "31,50€ (Pack de 10 unid.) [-10%]",
         descripcion: "Llavero con el logo y la figura de Pikachu ",
         material: "---",
-        tematica: "friki",
+        tematica: ["llaveros", "regalos", "friki"],
         imagen: "img/llaveropokemon.jpg"
     },
     {
@@ -19,8 +19,11 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: "abalorios",
-        imagen: "img/abaloriocruz.jpg"
+        tematica: ["llaveros", "regalos", "abalorios"],
+        imagen: [
+            "img/abaloriocruz.jpg",
+            "img/avaloriocruzmariposa.jpg"
+        ]
     },
     {
         id: 3,
@@ -30,7 +33,10 @@ const productos = [
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
         tematica: "abalorios",
-        imagen: "img/abaloriomariposa.jpg"
+        imagen: [
+            "img/abaloriomariposa.jpg",
+            "img/avaloriocruzmariposa.jpg"
+        ]
     },
     {
         id: 4,
@@ -40,8 +46,12 @@ const productos = [
         descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
         material: "---",
         tematica: ["navidad", "profesores", "regalos"],
-        imagen: "img/bolanavidadpersonalizada.jpg"
-    }
+        imagen: [
+            "img/bolanavidadpersonalizada.jpg",
+            "img/bolanavidadpersonalizada2.jpg",
+            "img/bolanavidadpersonalizada3.jpg"
+        ]
+    },
     {
         id: 5,
         titulo: "Imán recuerdo mi primera comunión",
@@ -51,7 +61,7 @@ const productos = [
         material: "---",
         tematica: ["comunión", "regalos"],
         imagen: "img/imancomunion.jpg"
-    }
+    },
     {
         id: 6,
         titulo: "Letras decoración",
@@ -61,5 +71,44 @@ const productos = [
         material: "---",
         tematica: ["comunión", "regalos", "decoración", "navidad"],
         imagen: "img/letras.jpg"
+    },
+    {
+        id: 7,
+        titulo: "Llavero caballo",
+        precioUnidad: 2.50,
+        precioPack: "21,25€ (Pack de 10 unid.) [-15%]",
+        descripcion: "Llavero silueta de un caballo",
+        material: "---",
+        tematica: ["llaveros", "regalos"],
+        imagen: "img/llaveropokemon.jpg"
+    },
+    {
+        id: 8,
+        titulo: "Llavero bautizo puzle",
+        precioUnidad: 3.25,
+        precioPack: "26€ (Pack de 10 unid.) [-20%]",
+        descripcion: "Llavero con los datos del niño, fecha, hora, lugar, personalizable al 100%",
+        material: "---",
+        tematica: ["llaveros", "regalos", "bautizos"],
+        imagen: [
+            "img/llaverobautizo.jpg",
+            "img/llaverobautizo2.jpg"
+        ]
+    },
+    {
+        id: 9,
+        titulo: "Nombre",
+        precioUnidad: 5,
+        precioPack: "No disponible",
+        descripcion: "Nombre con las medidas ---, se puede pintar",
+        material: "---",
+        tematica: ["decoración", "regalos"],
+        imagen: [
+            "img/nombre.jpg",
+            "img/nombre1.jpg",
+            "img/nombre2.jpg",
+            "img/nombre3.jpg",
+            "img/nombre4.jpg"
+        ]
     }
 ];
