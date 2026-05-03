@@ -60,7 +60,7 @@ const productos = [
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
         tematica: ["comuniones","imanes"],
-        imagenes: "img/imancomunion.jpg"
+        imagen: "img/imancomunion.jpg"
     },
     {
         id: 6,
