@@ -4,23 +4,23 @@
 const productos = [
     {
         id: 1,
-        titulo: "Llavero Costalero Personalizado",
+        titulo: "Llavero Pokémon",
         precioUnidad: 3.50,
-        precioPack: "30€ (Pack de 10 unid.)",
-        descripcion: "Llavero detallado con silueta de costalero. Ideal para cuadrillas o hermandades.",
-        material: "Madera DM 3mm",
-        tematica: "semana-santa",
-        imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Llavero"
+        precioPack: "31,50€ (Pack de 10 unid.) [-10%]",
+        descripcion: "Llavero con el logo y la figura de Pikachu ",
+        material: "---",
+        tematica: "Friki",
+        imagen: "img/llaveropokemon.jpg"
     },
     {
         id: 2,
-        titulo: "Marca Sitios Boda Elegance",
-        precioUnidad: 1.20,
-        precioPack: "50€ (Pack de 50 unid.)",
-        descripcion: "Nombres recortados en acrílico para colocar en los platos de los invitados.",
-        material: "Metacrilato espejo (Varios colores)",
-        tematica: "bodas",
-        imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Marcasitios"
+        titulo: "Abalorio cruz",
+        precioUnidad: 2.0,
+        precioPack: "17€ (Pack de 10 unid.) [-15%]",
+        descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios",
+        material: "---",
+        tematica: "Abalorios",
+        imagen: "img/abaloriocruz.jpg"
     },
     {
         id: 3,
