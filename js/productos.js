@@ -32,5 +32,4 @@ const productos = [
         tematica: "profesores",
         imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Placa+Profe"
     }
-    // Cuando quieras meter el producto 4, solo pones una coma arriba y añades el siguiente bloque aquí.
 ];
