@@ -102,7 +102,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Nombre con las medidas ---, se puede pintar",
         material: "---",
-        tematica: "decoración",
+        tematica: "decoraciones",
         imagenes: [
             "img/nombre.jpg",
             "img/nombre1.jpg",
