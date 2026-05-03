@@ -80,7 +80,7 @@ const productos = [
         descripcion: "Llavero silueta de un caballo",
         material: "---",
         tematica: "llaveros",
-        imagen: "img/llaveropokemon.jpg"
+        imagen: "img/llaverocaballo.jpg"
     },
     {
         id: 8,
