@@ -17,19 +17,29 @@ const productos = [
         titulo: "Abalorio cruz",
         precioUnidad: 2.0,
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
-        descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios",
+        descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
         tematica: "Abalorios",
         imagen: "img/abaloriocruz.jpg"
     },
     {
         id: 3,
-        titulo: "Placa 'Gracias Profe'",
-        precioUnidad: 18.00,
+        titulo: "Abalorio mariposa",
+        precioUnidad: 2.0,
+        precioPack: "17€ (Pack de 10 unid.) [-15%]",
+        descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
+        material: "---",
+        tematica: "Abalorios",
+        imagen: "img/abaloriomariposa.jpg"
+    },
+    {
+        id: 4,
+        titulo: "Bola navidad personalizada",
+        precioUnidad: 4.0,
         precioPack: "No aplica",
         descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
-        material: "Madera de pino + Metacrilato",
-        tematica: "profesores",
-        imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Placa+Profe"
+        material: "---",
+        tematica: ["navidad", "profesores", "regalos"],
+        imagen: "img/bolanavidadpersonalizada.jpg"
     }
 ];
