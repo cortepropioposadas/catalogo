@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | CortePropio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="logo">✨ CORTEPROPIO</div>
+        <p>Grabado láser personalizado en madera y metacrilato</p>
+        <p class="location">📍 Posadas, Córdoba</p>
+    </header>
+
+    <main>
+        <nav class="filtros" id="filtros">
+            <button class="active" onclick="filtrar('todos')">Todos</button>
+            <button onclick="filtrar('llaveros')">Llaveros</button>
+            <button onclick="filtrar('eventos')">Eventos</button>
+            <button onclick="filtrar('regalos')">Regalos</button>
+        </nav>
+
+        <div class="grid-productos" id="grid-productos"></div>
+    </main>
+
+    <footer>
+        <p>¿Tienes una idea a medida? <a href="https://instagram.com/cortepropio" target="_blank">Escríbeme por DM</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
