@@ -1,6 +1,43 @@
 // === LÓGICA DE LA TIENDA ===
 // Este archivo ya no se toca cuando añadas productos nuevos.
 
+// 1. Generar los filtros laterales dinámicamente
+function generarFiltrosTematica() {
+    const contenedor = document.getElementById('contenedor-filtros-tematica');
+    
+    // Reiniciamos el contenedor dejando solo el botón de "Todas"
+    contenedor.innerHTML = `
+        <h3>Filtrar por Temática</h3>
+        <label class="filter-option">
+            <input type="radio" name="tematica" value="todas" checked onchange="aplicarFiltros()"> Todas
+        </label>
+    `;
+
+    let tematicasUnicas = new Set();
+
+    productos.forEach(prod => {
+        // ¿Es una lista [] o una palabra normal?
+        if (Array.isArray(prod.tematica)) {
+            prod.tematica.forEach(t => tematicasUnicas.add(t.toLowerCase().trim()));
+        } else {
+            tematicasUnicas.add(prod.tematica.toLowerCase().trim());
+        }
+    });
+
+    let tematicasArray = Array.from(tematicasUnicas).sort();
+
+    tematicasArray.forEach(tematica => {
+        let nombreBonito = tematica.charAt(0).toUpperCase() + tematica.slice(1);
+        let htmlFiltro = `
+            <label class="filter-option">
+                <input type="radio" name="tematica" value="${tematica}" onchange="aplicarFiltros()"> ${nombreBonito}
+            </label>
+        `;
+        contenedor.innerHTML += htmlFiltro;
+    });
+}
+
+// 2. Mostrar los productos en la cuadrícula
 function mostrarProductos(listaProductos) {
     const contenedor = document.getElementById('contenedor-productos');
     contenedor.innerHTML = ''; 
@@ -12,7 +49,14 @@ function mostrarProductos(listaProductos) {
 
     listaProductos.forEach(prod => {
         const mensajeDM = encodeURIComponent(`¡Hola! Me interesa el producto: ${prod.titulo}. ¿Podéis darme más info?`);
-        const tematicaTexto = prod.tematica.join(' • ').toUpperCase();
+        
+        // Magia aquí: detectamos si es lista o palabra para mostrarlo bien
+        let tematicaTexto = "";
+        if (Array.isArray(prod.tematica)) {
+            tematicaTexto = prod.tematica.join(' • ').toUpperCase();
+        } else {
+            tematicaTexto = prod.tematica.toUpperCase();
+        }
 
         const tarjetaHTML = `
             <div class="card">
@@ -43,16 +87,28 @@ function mostrarProductos(listaProductos) {
     });
 }
 
+// 3. Aplicar los filtros cuando el usuario hace clic
 function aplicarFiltros() {
     const tematicaSeleccionada = document.querySelector('input[name="tematica"]:checked').value;
     const precioSeleccionado = document.querySelector('input[name="precio"]:checked').value;
 
     let productosFiltrados = productos; 
 
+    // Filtrar temática (soportando listas y palabras sueltas)
     if (tematicaSeleccionada !== 'todas') {
-        productosFiltrados = productosFiltrados.filter(p => p.tematica.includes(tematicaSeleccionada));
+        productosFiltrados = productosFiltrados.filter(p => {
+            if (Array.isArray(p.tematica)) {
+                // Si es lista, comprobamos si incluye la categoría elegida
+                const tematicasMinuscula = p.tematica.map(t => t.toLowerCase().trim());
+                return tematicasMinuscula.includes(tematicaSeleccionada.toLowerCase());
+            } else {
+                // Si es palabra sola, comprobamos si coincide exactamente
+                return p.tematica.toLowerCase().trim() === tematicaSeleccionada.toLowerCase();
+            }
+        });
     }
 
+    // Filtrar precio
     if (precioSeleccionado !== 'todos') {
         productosFiltrados = productosFiltrados.filter(p => {
             if (precioSeleccionado === 'bajo') return p.precioUnidad < 5;
@@ -65,35 +121,7 @@ function aplicarFiltros() {
     mostrarProductos(productosFiltrados);
 }
 
-// Función para crear los filtros laterales automáticamente leyendo la base de datos
-function generarFiltrosTematica() {
-    const contenedor = document.getElementById('contenedor-filtros-tematica');
-    let tematicasUnicas = new Set(); // El Set evita que haya temáticas repetidas
-
-    productos.forEach(prod => {
-        // Comprobamos si la temática es una lista (Array) o una sola palabra
-        if (Array.isArray(prod.tematica)) {
-            prod.tematica.forEach(t => tematicasUnicas.add(t.toLowerCase().trim()));
-        } else {
-            tematicasUnicas.add(prod.tematica.toLowerCase().trim());
-        }
-    });
-
-    let tematicasArray = Array.from(tematicasUnicas).sort();
-
-    tematicasArray.forEach(tematica => {
-        // Ponemos la primera letra en mayúscula para que quede bonito (ej: "friki" -> "Friki")
-        let nombreBonito = tematica.charAt(0).toUpperCase() + tematica.slice(1);
-        
-        let htmlFiltro = `
-            <label class="filter-option">
-                <input type="radio" name="tematica" value="${tematica}" onchange="aplicarFiltros()"> ${nombreBonito}
-            </label>
-        `;
-        contenedor.innerHTML += htmlFiltro; // Añadimos el botón al menú
-    });
-}
-
+// 4. Arranque inicial
 window.onload = () => {
     generarFiltrosTematica(); 
     mostrarProductos(productos); 
