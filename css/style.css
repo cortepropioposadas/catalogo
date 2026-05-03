@@ -1,117 +1,151 @@
+/* Importamos una fuente más moderna */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+
 :root {
-    --color-primario: #4A5FC1; /* Azul de tus posts */
-    --color-secundario: #D93B3B; /* Rojo de tus posts */
-    --color-acento: #F2C063; /* Mostaza */
-    --fondo: #FAFAFA;
+    --azul: #4A5FC1;
+    --rojo: #D93B3B;
+    --mostaza: #F2C063;
+    --negro: #1a1a1a;
+    --gris-suave: #f8f9fa;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--fondo);
-    margin: 0;
-    color: #333;
-}
-
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: white;
-    border-bottom: 2px solid #eee;
+    margin: 0;
+    color: var(--negro);
+    overflow-x: hidden;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+/* Manchas de colores de fondo (Estilo Instagram CORTEPROPIO) */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.15;
+    border-radius: 50%;
 }
 
+body::before {
+    width: 400px; height: 400px;
+    background: var(--azul);
+    top: -100px; right: -100px;
+}
+
+body::after {
+    width: 350px; height: 350px;
+    background: var(--rojo);
+    bottom: 20px; left: -100px;
+}
+
+/* Header al estilo perfil de Instagram */
+header {
+    text-align: center;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+.logo-container {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: lowercase; /* Como tu usuario @cortepropio */
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Filtros con estilo de "Píldora" */
 .filtros {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     padding: 2rem 1rem;
-    flex-wrap: wrap;
+    overflow-x: auto;
 }
 
 .filtros button {
-    padding: 8px 16px;
-    border: 2px solid var(--color-primario);
-    background: transparent;
-    color: var(--color-primario);
-    border-radius: 20px;
+    border: 1px solid #dbdbdb;
+    background: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    transition: all 0.2s;
 }
 
-.filtros button:hover, .filtros button.active {
-    background: var(--color-primario);
+.filtros button.active {
+    background: var(--negro);
     color: white;
+    border-color: var(--negro);
 }
 
+/* La cuadrícula de fotos (Grid) */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 2rem 4rem 2rem;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas como en Instagram */
+    gap: 3px; /* Espacio mínimo entre fotos */
+    max-width: 935px;
     margin: 0 auto;
 }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
+@media (max-width: 768px) {
+    .grid-productos { gap: 1px; } /* En móvil casi pegadas */
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* Tarjeta de producto */
+.card {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Cuadradas perfectas */
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    transition: filter 0.3s;
 }
 
-.card-info {
-    padding: 1.5rem;
-    text-align: center;
-    flex-grow: 1;
+/* Capa que aparece al pasar el ratón (Hover) */
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    color: white;
     display: flex;
     flex-direction: column;
-}
-
-.precio {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--color-secundario);
-    margin: 10px 0;
-}
-
-.btn-comprar {
-    display: inline-block;
-    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
     padding: 10px;
-    background-color: var(--color-primario);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.btn-comprar:hover {
-    background-color: #3b4da1;
-}
-
-footer {
     text-align: center;
-    padding: 2rem;
-    background: #333;
-    color: white;
 }
-footer a { color: var(--color-acento); }
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h3 { font-size: 0.9rem; margin: 0; }
+.card-overlay .precio { font-weight: bold; font-size: 1.1rem; margin-top: 5px;}
+
+.btn-dm {
+    background: white;
+    color: black;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
