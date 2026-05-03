@@ -19,7 +19,7 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: ["llaveros", "abalorios"],
+        tematica: ["llaveros", "abalorios", "comuniones", "bautizos"],
         imagenes: [
             "img/abaloriocruz.jpg",
             "img/abaloriocruzmariposa.jpg"
