@@ -4,44 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | CortePropio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Fuente moderna e industrial que pega con el corte láser -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === PALETA DE COLORES OFICIAL === */
+        :root {
+            --c-azul: #435ac2;
+            --c-rojo: #d82929;
+            --c-mostaza: #ffbd59;
+            --c-gris: #d9d9d9;
+            --c-texto: #1a1a1a;
+            --c-fondo: #fcfcfc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--c-fondo);
+            color: var(--c-texto);
+        }
+
+        /* HEADER */
+        header {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--c-gris);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span { color: var(--c-azul); }
+
+        /* CONTENEDOR PRINCIPAL (Layout a 2 columnas) */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* BARRA LATERAL (Filtros) */
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--c-gris);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--c-gris);
+            color: var(--c-azul);
+        }
+
+        .filter-group {
+            margin-bottom: 2rem;
+        }
+
+        .filter-option {
+            display: block;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .filter-option input {
+            margin-right: 8px;
+            accent-color: var(--c-azul);
+        }
+
+        /* CUADRÍCULA DE PRODUCTOS */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* TARJETAS DE PRODUCTO */
+        .card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid var(--c-gris);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--c-azul);
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: var(--c-gris);
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .etiqueta-tematica {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--c-rojo);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .card-detalles {
+            font-size: 0.8rem;
+            background: var(--c-fondo);
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .precio-box {
+            margin-top: auto;
+            border-top: 1px solid var(--c-gris);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .precio-unidad {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--c-azul);
+        }
+
+        .precio-pack {
+            font-size: 0.8rem;
+            color: #777;
+            text-align: right;
+        }
+
+        .btn-dm {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--c-azul);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn-dm:hover {
+            background-color: var(--c-rojo); /* Cambio al rojo de la marca al pasar el ratón */
+        }
+
+        /* Móvil */
+        @media (max-width: 768px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="logo-container">cortepropio</div>
-        <p class="tagline">Grabado láser personalizado • Posadas, Córdoba</p>
+        <div class="logo">CORTE<span>PROPIO</span></div>
+        <div style="font-size: 0.9rem; font-weight: 500;">Grabado láser personalizado • Posadas</div>
     </header>
 
-    <div class="container-main">
+    <div class="layout-grid">
+        <!-- COLUMNA LATERAL: FILTROS -->
         <aside class="sidebar">
-            <h3>Categorías</h3>
-            <ul class="filter-list">
-                <li><button class="active" onclick="filtrar('todos')">Todos los productos</button></li>
-                <li><button onclick="filtrar('llaveros')">Llaveros</button></li>
-                <li><button onclick="filtrar('eventos')">Eventos y Bodas</button></li>
-                <li><button onclick="filtrar('regalos')">Regalos Especiales</button></li>
-                <li><button onclick="filtrar('decoracion')">Decoración</button></li>
-            </ul>
-            
-            <div class="banner-dm">
-                <h4>¿Buscas algo a medida?</h4>
-                <p>Escríbenos por Instagram y diseñamos tu idea desde cero.</p>
-                <a href="https://ig.me/m/cortepropio" class="btn-sidebar">Enviar DM</a>
+            <div class="filter-group">
+                <h3>Filtrar por Temática</h3>
+                <label class="filter-option">
+                    <input type="radio" name="tematica" value="todas" checked onchange="aplicarFiltros()"> Todas
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="tematica" value="bodas" onchange="aplicarFiltros()"> Bodas
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="tematica" value="semana-santa" onchange="aplicarFiltros()"> Semana Santa
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="tematica" value="profesores" onchange="aplicarFiltros()"> Profesores
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Filtrar por Precio (Unidad)</h3>
+                <label class="filter-option">
+                    <input type="radio" name="precio" value="todos" checked onchange="aplicarFiltros()"> Todos los precios
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="precio" value="bajo" onchange="aplicarFiltros()"> Menos de 5€
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="precio" value="medio" onchange="aplicarFiltros()"> De 5€ a 15€
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="precio" value="alto" onchange="aplicarFiltros()"> Más de 15€
+                </label>
             </div>
         </aside>
 
-        <main class="content">
-            <div class="grid-productos" id="grid-productos">
-                </div>
+        <!-- COLUMNA PRINCIPAL: CATÁLOGO -->
+        <main class="productos-grid" id="contenedor-productos">
+            <!-- Los productos se cargan aquí mediante JavaScript -->
         </main>
     </div>
 
-    <section class="features">
-        <div class="feature-item"><span>📦</span> Envíos a toda España</div>
-        <div class="feature-item"><span>🎨</span> Diseños 100% únicos</div>
-        <div class="feature-item"><span>💬</span> Atención personalizada</div>
-    </section>
+    <script>
+        // === BASE DE DATOS DE PRODUCTOS DE PRUEBA ===
+        // Aquí es donde meteremos tus productos reales más adelante.
+        const productos = [
+            {
+                id: 1,
+                titulo: "Llavero Costalero Personalizado",
+                precioUnidad: 3.50,
+                precioPack: "30€ (Pack de 10 unid.)",
+                descripcion: "Llavero detallado con silueta de costalero. Ideal para cuadrillas o hermandades.",
+                material: "Madera DM 3mm",
+                tematica: "semana-santa",
+                imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Llavero"
+            },
+            {
+                id: 2,
+                titulo: "Marca Sitios Boda Elegance",
+                precioUnidad: 1.20,
+                precioPack: "50€ (Pack de 50 unid.)",
+                descripcion: "Nombres recortados en acrílico para colocar en los platos de los invitados.",
+                material: "Metacrilato espejo (Varios colores)",
+                tematica: "bodas",
+                imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Marcasitios"
+            },
+            {
+                id: 3,
+                titulo: "Placa 'Gracias Profe'",
+                precioUnidad: 18.00,
+                precioPack: "No aplica",
+                descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
+                material: "Madera de pino + Metacrilato",
+                tematica: "profesores",
+                imagen: "https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Foto+Placa+Profe"
+            }
+        ];
 
-    <script src="app.js"></script>
+        // Función para renderizar los productos en la web
+        function mostrarProductos(listaProductos) {
+            const contenedor = document.getElementById('contenedor-productos');
+            contenedor.innerHTML = ''; // Limpiamos antes de mostrar
+
+            if(listaProductos.length === 0) {
+                contenedor.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 3rem;">No hay productos que coincidan con estos filtros.</p>';
+                return;
+            }
+
+            listaProductos.forEach(prod => {
+                // Preparamos el mensaje para el DM de Instagram
+                const mensajeDM = encodeURIComponent(`¡Hola! Me interesa el producto: ${prod.titulo}. ¿Podéis darme más info?`);
+                
+                // Formateamos la temática para que se lea bonita
+                const tematicaTexto = prod.tematica.replace('-', ' ').toUpperCase();
+
+                const tarjetaHTML = `
+                    <div class="card">
+                        <img src="${prod.imagen}" alt="${prod.titulo}" class="card-img">
+                        <div class="card-body">
+                            <span class="etiqueta-tematica">${tematicaTexto}</span>
+                            <h3 class="card-title">${prod.titulo}</h3>
+                            <p class="card-desc">${prod.descripcion}</p>
+                            
+                            <div class="card-detalles">
+                                <strong>Material:</strong> ${prod.material}
+                            </div>
+
+                            <div class="precio-box">
+                                <div>
+                                    <div class="precio-unidad">${prod.precioUnidad.toFixed(2).replace('.', ',')} € / ud</div>
+                                    <div class="precio-pack">${prod.precioPack}</div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://ig.me/m/cortepropio?text=${mensajeDM}" target="_blank" class="btn-dm">
+                                Consultar por DM
+                            </a>
+                        </div>
+                    </div>
+                `;
+                contenedor.innerHTML += tarjetaHTML;
+            });
+        }
+
+        // Función que lee los filtros seleccionados y actualiza la vista
+        function aplicarFiltros() {
+            const tematicaSeleccionada = document.querySelector('input[name="tematica"]:checked').value;
+            const precioSeleccionado = document.querySelector('input[name="precio"]:checked').value;
+
+            let productosFiltrados = productos;
+
+            // Filtro por temática
+            if (tematicaSeleccionada !== 'todas') {
+                productosFiltrados = productosFiltrados.filter(p => p.tematica === tematicaSeleccionada);
+            }
+
+            // Filtro por precio
+            if (precioSeleccionado !== 'todos') {
+                productosFiltrados = productosFiltrados.filter(p => {
+                    if (precioSeleccionado === 'bajo') return p.precioUnidad < 5;
+                    if (precioSeleccionado === 'medio') return p.precioUnidad >= 5 && p.precioUnidad <= 15;
+                    if (precioSeleccionado === 'alto') return p.precioUnidad > 15;
+                    return true;
+                });
+            }
+
+            mostrarProductos(productosFiltrados);
+        }
+
+        // Al cargar la página, mostramos todos los productos inicialmente
+        window.onload = () => {
+            mostrarProductos(productos);
+        };
+    </script>
 </body>
 </html>
