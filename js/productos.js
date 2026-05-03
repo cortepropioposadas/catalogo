@@ -42,4 +42,24 @@ const productos = [
         tematica: ["navidad", "profesores", "regalos"],
         imagen: "img/bolanavidadpersonalizada.jpg"
     }
+    {
+        id: 5,
+        titulo: "Imán recuerdo mi primera comunión",
+        precioUnidad: 4.0,
+        precioPack: "64€ (Pack de 20 unid.) [-20%]",
+        descripcion: "Imán con --- medidas, foto a elegir del niño.",
+        material: "---",
+        tematica: ["comunión", "regalos"],
+        imagen: "img/imancomunion.jpg"
+    }
+    {
+        id: 6,
+        titulo: "Letras decoración",
+        precioUnidad: "depende del tamaño",
+        precioPack: "No disponible",
+        descripcion: "Letras con tipografia --- y con medidas personalizadas.",
+        material: "---",
+        tematica: ["comunión", "regalos", "decoración", "navidad"],
+        imagen: "img/letras.jpg"
+    }
 ];
