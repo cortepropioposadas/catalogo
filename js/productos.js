@@ -65,9 +65,9 @@ const productos = [
     {
         id: 6,
         titulo: "Letras decoración",
-        precioUnidad: "depende del tamaño",
-        precioPack: "No disponible",
-        descripcion: "Letras con tipografia --- y con medidas personalizadas.",
+        precioUnidad: 0,
+        precioPack: "Precio depende del tamaño",
+        descripcion: "Letras con tipografia y medidas personalizadas.",
         material: "---",
         tematica: ["comuniones", "decoraciones", "navidad"],
         imagen: "img/letras.jpg"
