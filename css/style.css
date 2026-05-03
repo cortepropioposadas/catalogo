@@ -255,13 +255,85 @@ header {
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
-/* Móvil */
+/* ========================================= */
+/* === ADAPTACIÓN MÓVIL (SMARTPHONES) === */
+/* ========================================= */
+
 @media (max-width: 768px) {
+    /* 1. Header más compacto e integrado */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        gap: 5px;
+    }
+
+    /* 2. Layout principal a 1 columna sin márgenes vacíos */
     .layout-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+        margin: 0.5rem auto;
+        gap: 1rem;
     }
+
+    /* 3. Magia UX: Barra lateral a menú horizontal deslizable */
     .sidebar {
         position: relative;
         top: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    .filter-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-group h3 {
+        border-bottom: none;
+        color: var(--c-texto);
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+
+    /* Hacemos que los contenedores de botones se deslicen con el dedo */
+    #contenedor-filtros-tematica,
+    .sidebar .filter-group:last-child {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding-bottom: 15px; /* Espacio para no cortar la sombra/dedo */
+        scrollbar-width: none; /* Oculta la barrita fea en Firefox */
+    }
+
+    /* Oculta la barra de scroll en Chrome/Safari/Móviles */
+    #contenedor-filtros-tematica::-webkit-scrollbar,
+    .sidebar .filter-group:last-child::-webkit-scrollbar {
+        display: none; 
+    }
+
+    /* Estilo "Píldora" para los filtros en móvil */
+    .filter-option {
+        flex: 0 0 auto; /* Evita que el texto se aplaste */
+        scroll-snap-align: start;
+        margin-bottom: 0;
+        background: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--c-gris);
+        font-size: 0.9rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    /* 4. Tarjetas de producto estilo Feed de Instagram */
+    .productos-grid {
+        grid-template-columns: 1fr; /* Una tarjeta grande por fila */
+        gap: 2rem;
+    }
+
+    /* Ajuste para que la foto no sea tan altísima en la pantalla del móvil */
+    .carousel-container {
+        aspect-ratio: 4 / 3; 
     }
 }
