@@ -255,28 +255,30 @@ header {
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
+
 /* ========================================= */
-/* === ADAPTACIÓN MÓVIL (SMARTPHONES) === */
+/* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
 /* ========================================= */
 
 @media (max-width: 768px) {
-    /* 1. Header más compacto e integrado */
+    /* 1. Header centrado y compacto */
     header {
-        flex-direction: column;
-        text-align: center;
         padding: 1rem;
+        text-align: center;
+        flex-direction: column;
         gap: 5px;
     }
 
-    /* 2. Layout principal a 1 columna sin márgenes vacíos */
+    /* 2. Layout principal sin márgenes laterales gigantes */
     .layout-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-        margin: 0.5rem auto;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 10px auto;
+        gap: 15px;
     }
 
-    /* 3. Magia UX: Barra lateral a menú horizontal deslizable */
+    /* 3. Filtros táctiles (Corrección de las cajas rotas) */
     .sidebar {
         position: relative;
         top: 0;
@@ -286,54 +288,102 @@ header {
     }
 
     .filter-group {
-        margin-bottom: 1.5rem;
+        margin-bottom: 10px;
     }
 
     .filter-group h3 {
-        border-bottom: none;
-        color: var(--c-texto);
-        margin-bottom: 0.8rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        border: none;
     }
 
-    /* Hacemos que los contenedores de botones se deslicen con el dedo */
     #contenedor-filtros-tematica,
     .sidebar .filter-group:last-child {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 10px;
-        padding-bottom: 15px; /* Espacio para no cortar la sombra/dedo */
-        scrollbar-width: none; /* Oculta la barrita fea en Firefox */
+        gap: 8px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
     }
 
-    /* Oculta la barra de scroll en Chrome/Safari/Móviles */
     #contenedor-filtros-tematica::-webkit-scrollbar,
     .sidebar .filter-group:last-child::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* El "botón" del filtro arreglado */
+    .filter-option {
+        display: flex;
+        align-items: center;
+        white-space: nowrap; /* Evita que el texto rompa la caja */
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid var(--c-gris);
+        background: white;
+        font-size: 0.85rem;
+        margin: 0;
+        height: fit-content;
+    }
+
+    /* 4. LA CUADRÍCULA A 2 COLUMNAS */
+    .productos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+        gap: 10px; /* Espacio más pequeñito entre tarjetas */
+    }
+
+    /* 5. Ajustes de tarjeta para que quepa todo en 2 columnas */
+    .card-body {
+        padding: 0.6rem;
+    }
+
+    .etiqueta-tematica {
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .card-title {
+        font-size: 0.85rem; /* Título más pequeño */
+        margin-bottom: 0.3rem;
+        line-height: 1.2;
+    }
+
+    /* Ocultamos la descripción en móvil para no saturar la pantalla */
+    .card-desc {
         display: none; 
     }
 
-    /* Estilo "Píldora" para los filtros en móvil */
-    .filter-option {
-        flex: 0 0 auto; /* Evita que el texto se aplaste */
-        scroll-snap-align: start;
-        margin-bottom: 0;
-        background: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        border: 1px solid var(--c-gris);
-        font-size: 0.9rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    .card-detalles {
+        font-size: 0.7rem;
+        padding: 4px;
+        margin-bottom: 0.5rem;
     }
 
-    /* 4. Tarjetas de producto estilo Feed de Instagram */
-    .productos-grid {
-        grid-template-columns: 1fr; /* Una tarjeta grande por fila */
-        gap: 2rem;
+    .precio-box {
+        padding-top: 0.5rem;
     }
 
-    /* Ajuste para que la foto no sea tan altísima en la pantalla del móvil */
-    .carousel-container {
-        aspect-ratio: 4 / 3; 
+    .precio-unidad {
+        font-size: 0.95rem; /* Precio un poco más ajustado */
     }
+
+    .precio-pack {
+        font-size: 0.65rem;
+    }
+
+    .btn-dm {
+        font-size: 0.75rem;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Hacemos las flechas del carrusel un poco más pequeñas */
+    .carousel-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+    
 }
+
