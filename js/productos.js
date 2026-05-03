@@ -22,7 +22,7 @@ const productos = [
         tematica: ["llaveros", "regalos", "abalorios"],
         imagen: [
             "img/abaloriocruz.jpg",
-            "img/avaloriocruzmariposa.jpg"
+            "img/abaloriocruzmariposa.jpg"
         ]
     },
     {
@@ -35,7 +35,7 @@ const productos = [
         tematica: "abalorios",
         imagen: [
             "img/abaloriomariposa.jpg",
-            "img/avaloriocruzmariposa.jpg"
+            "img/abaloriocruzmariposa.jpg"
         ]
     },
     {
