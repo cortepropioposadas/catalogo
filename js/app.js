@@ -37,7 +37,7 @@ function generarFiltrosTematica() {
     });
 }
 
-// 2. Mostrar los productos en la cuadrícula
+// 2. Mostrar los productos en la cuadrícula (ACTUALIZADO PARA CARRUSEL)
 function mostrarProductos(listaProductos) {
     const contenedor = document.getElementById('contenedor-productos');
     contenedor.innerHTML = ''; 
@@ -50,7 +50,6 @@ function mostrarProductos(listaProductos) {
     listaProductos.forEach(prod => {
         const mensajeDM = encodeURIComponent(`¡Hola! Me interesa el producto: ${prod.titulo}. ¿Podéis darme más info?`);
         
-        // Magia aquí: detectamos si es lista o palabra para mostrarlo bien
         let tematicaTexto = "";
         if (Array.isArray(prod.tematica)) {
             tematicaTexto = prod.tematica.join(' • ').toUpperCase();
@@ -58,9 +57,39 @@ function mostrarProductos(listaProductos) {
             tematicaTexto = prod.tematica.toUpperCase();
         }
 
+        // --- LÓGICA DEL CARRUSEL ---
+        // Soportar tanto la nueva lista "imagenes" como si olvidaste cambiarlo y dejaste "imagen"
+        let arrayImagenes = prod.imagenes || [prod.imagen]; 
+        
+        // Crear las imágenes de HTML
+        let slidesHTML = arrayImagenes.map(imgSrc => `
+            <div class="carousel-slide">
+                <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy">
+            </div>
+        `).join('');
+
+        // Poner flechas SOLO si hay más de 1 imagen
+        let botonesHTML = '';
+        if (arrayImagenes.length > 1) {
+            botonesHTML = `
+                <button class="carousel-btn prev" onclick="moverCarrusel(event, -1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moverCarrusel(event, 1)">&#10095;</button>
+            `;
+        }
+
+        let carruselEstructura = `
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    ${slidesHTML}
+                </div>
+                ${botonesHTML}
+            </div>
+        `;
+        // --- FIN LÓGICA CARRUSEL ---
+
         const tarjetaHTML = `
             <div class="card">
-                <img src="${prod.imagen}" alt="${prod.titulo}" class="card-img">
+                ${carruselEstructura} <!-- Insertamos el carrusel aquí -->
                 <div class="card-body">
                     <span class="etiqueta-tematica">${tematicaTexto}</span>
                     <h3 class="card-title">${prod.titulo}</h3>
@@ -85,6 +114,16 @@ function mostrarProductos(listaProductos) {
         `;
         contenedor.innerHTML += tarjetaHTML;
     });
+}
+//FUNCIÓN: Hace que las flechas muevan las fotos
+function moverCarrusel(evento, direccion) {
+    evento.preventDefault(); // Evita que la web salte o haga cosas raras
+    const boton = evento.target;
+    const contenedor = boton.closest('.carousel-container');
+    const track = contenedor.querySelector('.carousel-track');
+    const anchoSlide = track.offsetWidth;
+    
+    track.scrollBy({ left: anchoSlide * direccion, behavior: 'smooth' });
 }
 
 // 3. Aplicar los filtros cuando el usuario hace clic
