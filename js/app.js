@@ -1,11 +1,8 @@
-// === LÓGICA DE LA TIENDA ===
-// Este archivo ya no se toca cuando añadas productos nuevos.
+// === LÓGICA DE LA TIENDA (BLINDADA) ===
 
-// 1. Generar los filtros laterales dinámicamente
 function generarFiltrosTematica() {
     const contenedor = document.getElementById('contenedor-filtros-tematica');
     
-    // Reiniciamos el contenedor dejando solo el botón de "Todas"
     contenedor.innerHTML = `
         <h3>Filtrar por Temática</h3>
         <label class="filter-option">
@@ -16,10 +13,9 @@ function generarFiltrosTematica() {
     let tematicasUnicas = new Set();
 
     productos.forEach(prod => {
-        // ¿Es una lista [] o una palabra normal?
         if (Array.isArray(prod.tematica)) {
             prod.tematica.forEach(t => tematicasUnicas.add(t.toLowerCase().trim()));
-        } else {
+        } else if (prod.tematica) {
             tematicasUnicas.add(prod.tematica.toLowerCase().trim());
         }
     });
@@ -37,7 +33,6 @@ function generarFiltrosTematica() {
     });
 }
 
-// 2. Mostrar los productos en la cuadrícula (ACTUALIZADO PARA CARRUSEL)
 function mostrarProductos(listaProductos) {
     const contenedor = document.getElementById('contenedor-productos');
     contenedor.innerHTML = ''; 
@@ -53,24 +48,26 @@ function mostrarProductos(listaProductos) {
         let tematicaTexto = "";
         if (Array.isArray(prod.tematica)) {
             tematicaTexto = prod.tematica.join(' • ').toUpperCase();
-        } else {
+        } else if (prod.tematica) {
             tematicaTexto = prod.tematica.toUpperCase();
         }
 
-        // --- LÓGICA DEL CARRUSEL ---
-        // Soportar tanto la nueva lista "imagenes" como si olvidaste cambiarlo y dejaste "imagen"
-        let arrayImagenes = prod.imagenes || [prod.imagen]; 
-        
-        // Crear las imágenes de HTML
-        let slidesHTML = arrayImagenes.map(imgSrc => `
+        // --- MAGIA CARRUSEL (A prueba de errores) ---
+        let arrayFotos = [];
+        if (Array.isArray(prod.imagenes)) arrayFotos = prod.imagenes;
+        else if (Array.isArray(prod.imagen)) arrayFotos = prod.imagen;
+        else if (prod.imagenes) arrayFotos = [prod.imagenes];
+        else if (prod.imagen) arrayFotos = [prod.imagen];
+        else arrayFotos = ["https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Sin+Foto"];
+
+        let slidesHTML = arrayFotos.map(imgSrc => `
             <div class="carousel-slide">
                 <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy">
             </div>
         `).join('');
 
-        // Poner flechas SOLO si hay más de 1 imagen
         let botonesHTML = '';
-        if (arrayImagenes.length > 1) {
+        if (arrayFotos.length > 1) {
             botonesHTML = `
                 <button class="carousel-btn prev" onclick="moverCarrusel(event, -1)">&#10094;</button>
                 <button class="carousel-btn next" onclick="moverCarrusel(event, 1)">&#10095;</button>
@@ -85,11 +82,19 @@ function mostrarProductos(listaProductos) {
                 ${botonesHTML}
             </div>
         `;
-        // --- FIN LÓGICA CARRUSEL ---
+        // --- FIN MAGIA CARRUSEL ---
+
+        // Protegemos el precio por si pones texto o un 0
+        let precioMostrado = "";
+        if (typeof prod.precioUnidad === 'number' && prod.precioUnidad > 0) {
+            precioMostrado = `${prod.precioUnidad.toFixed(2).replace('.', ',')} € / ud`;
+        } else {
+            precioMostrado = "Consultar precio";
+        }
 
         const tarjetaHTML = `
             <div class="card">
-                ${carruselEstructura} <!-- Insertamos el carrusel aquí -->
+                ${carruselEstructura}
                 <div class="card-body">
                     <span class="etiqueta-tematica">${tematicaTexto}</span>
                     <h3 class="card-title">${prod.titulo}</h3>
@@ -101,8 +106,8 @@ function mostrarProductos(listaProductos) {
 
                     <div class="precio-box">
                         <div>
-                            <div class="precio-unidad">${prod.precioUnidad.toFixed(2).replace('.', ',')} € / ud</div>
-                            <div class="precio-pack">${prod.precioPack}</div>
+                            <div class="precio-unidad">${precioMostrado}</div>
+                            <div class="precio-pack">${prod.precioPack || ""}</div>
                         </div>
                     </div>
                     
@@ -115,42 +120,37 @@ function mostrarProductos(listaProductos) {
         contenedor.innerHTML += tarjetaHTML;
     });
 }
-//FUNCIÓN: Hace que las flechas muevan las fotos
+
 function moverCarrusel(evento, direccion) {
-    evento.preventDefault(); // Evita que la web salte o haga cosas raras
+    evento.preventDefault(); 
     const boton = evento.target;
     const contenedor = boton.closest('.carousel-container');
     const track = contenedor.querySelector('.carousel-track');
     const anchoSlide = track.offsetWidth;
-    
     track.scrollBy({ left: anchoSlide * direccion, behavior: 'smooth' });
 }
 
-// 3. Aplicar los filtros cuando el usuario hace clic
 function aplicarFiltros() {
     const tematicaSeleccionada = document.querySelector('input[name="tematica"]:checked').value;
     const precioSeleccionado = document.querySelector('input[name="precio"]:checked').value;
 
     let productosFiltrados = productos; 
 
-    // Filtrar temática (soportando listas y palabras sueltas)
     if (tematicaSeleccionada !== 'todas') {
         productosFiltrados = productosFiltrados.filter(p => {
             if (Array.isArray(p.tematica)) {
-                // Si es lista, comprobamos si incluye la categoría elegida
-                const tematicasMinuscula = p.tematica.map(t => t.toLowerCase().trim());
-                return tematicasMinuscula.includes(tematicaSeleccionada.toLowerCase());
-            } else {
-                // Si es palabra sola, comprobamos si coincide exactamente
+                return p.tematica.map(t => t.toLowerCase().trim()).includes(tematicaSeleccionada.toLowerCase());
+            } else if (p.tematica) {
                 return p.tematica.toLowerCase().trim() === tematicaSeleccionada.toLowerCase();
             }
+            return false;
         });
     }
 
-    // Filtrar precio
     if (precioSeleccionado !== 'todos') {
         productosFiltrados = productosFiltrados.filter(p => {
-            if (precioSeleccionado === 'bajo') return p.precioUnidad < 5;
+            if (typeof p.precioUnidad !== 'number') return false; // Ignora los que no tengan número
+            if (precioSeleccionado === 'bajo') return p.precioUnidad < 5 && p.precioUnidad > 0;
             if (precioSeleccionado === 'medio') return p.precioUnidad >= 5 && p.precioUnidad <= 15;
             if (precioSeleccionado === 'alto') return p.precioUnidad > 15;
             return true;
@@ -160,7 +160,6 @@ function aplicarFiltros() {
     mostrarProductos(productosFiltrados);
 }
 
-// 4. Arranque inicial
 window.onload = () => {
     generarFiltrosTematica(); 
     mostrarProductos(productos); 
