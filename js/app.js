@@ -47,7 +47,7 @@ function aplicarFiltros() {
     const tematicaSeleccionada = document.querySelector('input[name="tematica"]:checked').value;
     const precioSeleccionado = document.querySelector('input[name="precio"]:checked').value;
 
-    let productosFiltrados = productos; // Coge la variable 'productos' del archivo productos.js
+    let productosFiltrados = productos; 
 
     if (tematicaSeleccionada !== 'todas') {
         productosFiltrados = productosFiltrados.filter(p => p.tematica === tematicaSeleccionada);
@@ -66,5 +66,5 @@ function aplicarFiltros() {
 }
 
 window.onload = () => {
-    mostrarProductos(productos); // Coge la variable 'productos' del archivo productos.js
+    mostrarProductos(productos); 
 };
