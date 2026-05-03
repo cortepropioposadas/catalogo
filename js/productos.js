@@ -9,7 +9,7 @@ const productos = [
         precioPack: "31,50€ (Pack de 10 unid.) [-10%]",
         descripcion: "Llavero con el logo y la figura de Pikachu ",
         material: "---",
-        tematica: "Friki",
+        tematica: "friki",
         imagen: "img/llaveropokemon.jpg"
     },
     {
@@ -19,7 +19,7 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: "Abalorios",
+        tematica: "abalorios",
         imagen: "img/abaloriocruz.jpg"
     },
     {
@@ -29,7 +29,7 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: "Abalorios",
+        tematica: "abalorios",
         imagen: "img/abaloriomariposa.jpg"
     },
     {
