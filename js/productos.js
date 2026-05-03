@@ -20,7 +20,7 @@ const productos = [
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
         tematica: ["llaveros", "abalorios"],
-        imagen: [
+        imagenes: [
             "img/abaloriocruz.jpg",
             "img/abaloriocruzmariposa.jpg"
         ]
@@ -33,7 +33,7 @@ const productos = [
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
         tematica: ["llaveros", "abalorios"],
-        imagen: [
+        imagenes: [
             "img/abaloriomariposa.jpg",
             "img/abaloriocruzmariposa.jpg"
         ]
@@ -46,7 +46,7 @@ const productos = [
         descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
         material: "---",
         tematica: ["navidad", "profesores"],
-        imagen: [
+        imagenes: [
             "img/bolanavidadpersonalizada.jpg",
             "img/bolanavidadpersonalizada2.jpg",
             "img/bolanavidadpersonalizada3.jpg"
@@ -60,7 +60,7 @@ const productos = [
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
         tematica: ["comuniones","imanes"],
-        imagen: "img/imancomunion.jpg"
+        imagenes: "img/imancomunion.jpg"
     },
     {
         id: 6,
@@ -90,7 +90,7 @@ const productos = [
         descripcion: "Llavero con los datos del niño, fecha, hora, lugar, personalizable al 100%",
         material: "---",
         tematica: ["llaveros", "bautizos"],
-        imagen: [
+        imagenes: [
             "img/llaverobautizo.jpg",
             "img/llaverobautizo2.jpg"
         ]
@@ -103,7 +103,7 @@ const productos = [
         descripcion: "Nombre con las medidas ---, se puede pintar",
         material: "---",
         tematica: "decoración",
-        imagen: [
+        imagenes: [
             "img/nombre.jpg",
             "img/nombre1.jpg",
             "img/nombre2.jpg",
