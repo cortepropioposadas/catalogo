@@ -1,0 +1,117 @@
+:root {
+    --color-primario: #4A5FC1; /* Azul de tus posts */
+    --color-secundario: #D93B3B; /* Rojo de tus posts */
+    --color-acento: #F2C063; /* Mostaza */
+    --fondo: #FAFAFA;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo);
+    margin: 0;
+    color: #333;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: white;
+    border-bottom: 2px solid #eee;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    padding: 8px 16px;
+    border: 2px solid var(--color-primario);
+    background: transparent;
+    color: var(--color-primario);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filtros button:hover, .filtros button.active {
+    background: var(--color-primario);
+    color: white;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 2rem 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.precio {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin: 10px 0;
+}
+
+.btn-comprar {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-comprar:hover {
+    background-color: #3b4da1;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+footer a { color: var(--color-acento); }
