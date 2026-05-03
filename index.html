@@ -9,27 +9,38 @@
 <body>
     <header>
         <div class="logo-container">cortepropio</div>
-        <div class="bio">
-            ✨ Grabado láser personalizado<br>
-            📍 Posadas, Córdoba 🇪🇸<br>
-            🛒 <strong>Pedidos por DM</strong>
-        </div>
+        <p class="tagline">Grabado láser personalizado • Posadas, Córdoba</p>
     </header>
 
-    <main>
-        <nav class="filtros" id="filtros">
-            <button class="active" onclick="filtrar('todos')">Todos</button>
-            <button onclick="filtrar('llaveros')">Llaveros</button>
-            <button onclick="filtrar('eventos')">Eventos</button>
-            <button onclick="filtrar('regalos')">Regalos</button>
-        </nav>
+    <div class="container-main">
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul class="filter-list">
+                <li><button class="active" onclick="filtrar('todos')">Todos los productos</button></li>
+                <li><button onclick="filtrar('llaveros')">Llaveros</button></li>
+                <li><button onclick="filtrar('eventos')">Eventos y Bodas</button></li>
+                <li><button onclick="filtrar('regalos')">Regalos Especiales</button></li>
+                <li><button onclick="filtrar('decoracion')">Decoración</button></li>
+            </ul>
+            
+            <div class="banner-dm">
+                <h4>¿Buscas algo a medida?</h4>
+                <p>Escríbenos por Instagram y diseñamos tu idea desde cero.</p>
+                <a href="https://ig.me/m/cortepropio" class="btn-sidebar">Enviar DM</a>
+            </div>
+        </aside>
 
-        <div class="grid-productos" id="grid-productos"></div>
-    </main>
+        <main class="content">
+            <div class="grid-productos" id="grid-productos">
+                </div>
+        </main>
+    </div>
 
-    <footer>
-        <p>¿Tienes una idea a medida? <a href="https://instagram.com/cortepropio" target="_blank">Escríbeme por DM</a></p>
-    </footer>
+    <section class="features">
+        <div class="feature-item"><span>📦</span> Envíos a toda España</div>
+        <div class="feature-item"><span>🎨</span> Diseños 100% únicos</div>
+        <div class="feature-item"><span>💬</span> Atención personalizada</div>
+    </section>
 
     <script src="app.js"></script>
 </body>
