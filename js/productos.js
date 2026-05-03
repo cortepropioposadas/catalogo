@@ -59,7 +59,7 @@ const productos = [
         precioPack: "64€ (Pack de 20 unid.) [-20%]",
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
-        tematica: ["comunión", "regalos"],
+        tematica: ["comuniones", "regalos"],
         imagen: "img/imancomunion.jpg"
     },
     {
