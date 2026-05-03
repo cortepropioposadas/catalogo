@@ -41,15 +41,14 @@ function mostrarProductos(categoriaFiltrada) {
         const mensaje = encodeURIComponent(`¡Hola! Me interesa el producto: ${producto.nombre} (${producto.precio}). ¿Me das más info?`);
         const urlIG = `https://ig.me/m/cortepropio`; // Enlace directo a mensajes (alternativa: https://instagram.com/cortepropio)
 
-        const card = document.createElement('div');
+        cconst card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}">
-            <div class="card-info">
+            <div class="card-overlay">
                 <h3>${producto.nombre}</h3>
-                <p style="font-size: 0.9em; color: #666;">${producto.descripcion}</p>
-                <p class="precio">${producto.precio}</p>
-                <a href="${urlIG}" target="_blank" class="btn-comprar">Pedir por DM 💬</a>
+                <span class="precio">${producto.precio}</span>
+                <a href="${urlIG}" target="_blank" class="btn-dm">Consultar por DM</a>
             </div>
         `;
         grid.appendChild(card);
