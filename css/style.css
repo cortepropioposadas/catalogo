@@ -1,151 +1,110 @@
-/* Importamos una fuente más moderna */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 :root {
     --azul: #4A5FC1;
     --rojo: #D93B3B;
     --mostaza: #F2C063;
-    --negro: #1a1a1a;
-    --gris-suave: #f8f9fa;
+    --fondo-gris: #fcfcfc;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: white;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
     margin: 0;
-    color: var(--negro);
-    overflow-x: hidden;
+    color: #333;
 }
 
-/* Manchas de colores de fondo (Estilo Instagram CORTEPROPIO) */
-body::before, body::after {
-    content: "";
-    position: fixed;
-    z-index: -1;
-    filter: blur(80px);
-    opacity: 0.15;
-    border-radius: 50%;
-}
-
+/* Manchas de fondo sutiles */
 body::before {
-    width: 400px; height: 400px;
-    background: var(--azul);
-    top: -100px; right: -100px;
+    content: ""; position: fixed; top: -10%; right: -5%; width: 40%; height: 40%;
+    background: radial-gradient(circle, rgba(74, 95, 193, 0.08) 0%, transparent 70%);
+    z-index: -1;
 }
 
-body::after {
-    width: 350px; height: 350px;
-    background: var(--rojo);
-    bottom: 20px; left: -100px;
-}
-
-/* Header al estilo perfil de Instagram */
 header {
+    padding: 2rem;
     text-align: center;
-    padding: 3rem 1rem 1rem 1rem;
+    background: #fff;
 }
 
-.logo-container {
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-transform: lowercase; /* Como tu usuario @cortepropio */
-    letter-spacing: -1px;
-    margin-bottom: 0.5rem;
-}
+.logo-container { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; }
+.tagline { color: #888; font-size: 0.9rem; margin-top: 5px; }
 
-.bio {
-    color: #666;
-    max-width: 400px;
-    margin: 0 auto;
-    line-height: 1.5;
-    font-size: 0.95rem;
-}
-
-/* Filtros con estilo de "Píldora" */
-.filtros {
+/* Layout de dos columnas */
+.container-main {
     display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 2rem 1rem;
-    overflow-x: auto;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
 }
 
-.filtros button {
-    border: 1px solid #dbdbdb;
-    background: white;
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s;
+/* Sidebar */
+.sidebar { width: 250px; flex-shrink: 0; }
+.sidebar h3 { font-size: 1.1rem; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+.filter-list { list-style: none; padding: 0; }
+.filter-list li button {
+    width: 100%; text-align: left; background: none; border: none;
+    padding: 12px 0; font-size: 0.95rem; cursor: pointer; color: #666;
+    transition: 0.3s;
+}
+.filter-list li button.active, .filter-list li button:hover { color: var(--azul); font-weight: 600; }
+
+.banner-dm {
+    background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;
+}
+.btn-sidebar {
+    display: block; text-align: center; background: var(--azul); color: white;
+    text-decoration: none; padding: 10px; border-radius: 8px; margin-top: 10px; font-size: 0.8rem;
 }
 
-.filtros button.active {
-    background: var(--negro);
-    color: white;
-    border-color: var(--negro);
-}
-
-/* La cuadrícula de fotos (Grid) */
+/* Tarjetas de Producto (Inspirado en Imagen 1) */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas como en Instagram */
-    gap: 3px; /* Espacio mínimo entre fotos */
-    max-width: 935px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    .grid-productos { gap: 1px; } /* En móvil casi pegadas */
-}
-
-/* Tarjeta de producto */
 .card {
-    position: relative;
-    aspect-ratio: 1 / 1; /* Cuadradas perfectas */
-    cursor: pointer;
+    background: #fff;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid #f0f0f0;
     overflow: hidden;
 }
 
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s;
+.card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+
+.img-container {
+    width: 100%; aspect-ratio: 1/1; background: #f5f5f5; overflow: hidden;
 }
 
-/* Capa que aparece al pasar el ratón (Hover) */
-.card-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    padding: 10px;
-    text-align: center;
+.card img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-info { padding: 1.5rem; text-align: center; }
+.card-info h3 { font-size: 1rem; margin: 0; font-weight: 600; color: #222; }
+.card-info .precio { 
+    display: block; margin: 10px 0; font-size: 1.2rem; 
+    font-weight: 700; color: var(--rojo); 
 }
 
-.card:hover .card-overlay {
-    opacity: 1;
+.btn-comprar {
+    display: block; padding: 10px; border: 1.5px solid var(--azul);
+    color: var(--azul); text-decoration: none; border-radius: 30px;
+    font-size: 0.85rem; font-weight: 600; transition: 0.3s;
 }
 
-.card-overlay h3 { font-size: 0.9rem; margin: 0; }
-.card-overlay .precio { font-weight: bold; font-size: 1.1rem; margin-top: 5px;}
+.btn-comprar:hover { background: var(--azul); color: white; }
 
-.btn-dm {
-    background: white;
-    color: black;
-    padding: 5px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-top: 10px;
+/* Features Footer */
+.features {
+    display: flex; justify-content: center; gap: 50px;
+    padding: 4rem 2rem; background: #fafafa; margin-top: 4rem;
+}
+
+@media (max-width: 900px) {
+    .container-main { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .filter-list { display: flex; overflow-x: auto; gap: 10px; }
 }
