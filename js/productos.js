@@ -9,7 +9,7 @@ const productos = [
         precioPack: "31,50€ (Pack de 10 unid.) [-10%]",
         descripcion: "Llavero con el logo y la figura de Pikachu ",
         material: "---",
-        tematica: ["llaveros", "regalos", "friki"],
+        tematica: ["llaveros", "friki"],
         imagen: "img/llaveropokemon.jpg"
     },
     {
@@ -19,7 +19,7 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: ["llaveros", "regalos", "abalorios"],
+        tematica: ["llaveros", "abalorios"],
         imagen: [
             "img/abaloriocruz.jpg",
             "img/abaloriocruzmariposa.jpg"
@@ -32,7 +32,7 @@ const productos = [
         precioPack: "17€ (Pack de 10 unid.) [-15%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: "abalorios",
+        tematica: ["llaveros", "abalorios"],
         imagen: [
             "img/abaloriomariposa.jpg",
             "img/abaloriocruzmariposa.jpg"
@@ -45,7 +45,7 @@ const productos = [
         precioPack: "No aplica",
         descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
         material: "---",
-        tematica: ["navidad", "profesores", "regalos"],
+        tematica: ["navidad", "profesores"],
         imagen: [
             "img/bolanavidadpersonalizada.jpg",
             "img/bolanavidadpersonalizada2.jpg",
@@ -59,7 +59,7 @@ const productos = [
         precioPack: "64€ (Pack de 20 unid.) [-20%]",
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
-        tematica: ["comuniones", "regalos"],
+        tematica: ["comuniones","imanes"],
         imagen: "img/imancomunion.jpg"
     },
     {
@@ -69,7 +69,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Letras con tipografia --- y con medidas personalizadas.",
         material: "---",
-        tematica: ["comunión", "regalos", "decoración", "navidad"],
+        tematica: ["comuniones", "decoraciones", "navidad"],
         imagen: "img/letras.jpg"
     },
     {
@@ -79,7 +79,7 @@ const productos = [
         precioPack: "21,25€ (Pack de 10 unid.) [-15%]",
         descripcion: "Llavero silueta de un caballo",
         material: "---",
-        tematica: ["llaveros", "regalos"],
+        tematica: "llaveros",
         imagen: "img/llaveropokemon.jpg"
     },
     {
@@ -89,7 +89,7 @@ const productos = [
         precioPack: "26€ (Pack de 10 unid.) [-20%]",
         descripcion: "Llavero con los datos del niño, fecha, hora, lugar, personalizable al 100%",
         material: "---",
-        tematica: ["llaveros", "regalos", "bautizos"],
+        tematica: ["llaveros", "bautizos"],
         imagen: [
             "img/llaverobautizo.jpg",
             "img/llaverobautizo2.jpg"
@@ -102,7 +102,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Nombre con las medidas ---, se puede pintar",
         material: "---",
-        tematica: ["decoración", "regalos"],
+        tematica: "decoración",
         imagen: [
             "img/nombre.jpg",
             "img/nombre1.jpg",
