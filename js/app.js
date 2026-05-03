@@ -12,7 +12,7 @@ function mostrarProductos(listaProductos) {
 
     listaProductos.forEach(prod => {
         const mensajeDM = encodeURIComponent(`¡Hola! Me interesa el producto: ${prod.titulo}. ¿Podéis darme más info?`);
-        const tematicaTexto = prod.tematica.replace('-', ' ').toUpperCase();
+        const tematicaTexto = prod.tematica.join(' • ').toUpperCase();
 
         const tarjetaHTML = `
             <div class="card">
@@ -50,7 +50,7 @@ function aplicarFiltros() {
     let productosFiltrados = productos; 
 
     if (tematicaSeleccionada !== 'todas') {
-        productosFiltrados = productosFiltrados.filter(p => p.tematica === tematicaSeleccionada);
+        productosFiltrados = productosFiltrados.filter(p => p.tematica.includes(tematicaSeleccionada));
     }
 
     if (precioSeleccionado !== 'todos') {
