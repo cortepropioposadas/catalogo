@@ -65,6 +65,36 @@ function aplicarFiltros() {
     mostrarProductos(productosFiltrados);
 }
 
+// Función para crear los filtros laterales automáticamente leyendo la base de datos
+function generarFiltrosTematica() {
+    const contenedor = document.getElementById('contenedor-filtros-tematica');
+    let tematicasUnicas = new Set(); // El Set evita que haya temáticas repetidas
+
+    productos.forEach(prod => {
+        // Comprobamos si la temática es una lista (Array) o una sola palabra
+        if (Array.isArray(prod.tematica)) {
+            prod.tematica.forEach(t => tematicasUnicas.add(t.toLowerCase().trim()));
+        } else {
+            tematicasUnicas.add(prod.tematica.toLowerCase().trim());
+        }
+    });
+
+    let tematicasArray = Array.from(tematicasUnicas).sort();
+
+    tematicasArray.forEach(tematica => {
+        // Ponemos la primera letra en mayúscula para que quede bonito (ej: "friki" -> "Friki")
+        let nombreBonito = tematica.charAt(0).toUpperCase() + tematica.slice(1);
+        
+        let htmlFiltro = `
+            <label class="filter-option">
+                <input type="radio" name="tematica" value="${tematica}" onchange="aplicarFiltros()"> ${nombreBonito}
+            </label>
+        `;
+        contenedor.innerHTML += htmlFiltro; // Añadimos el botón al menú
+    });
+}
+
 window.onload = () => {
+    generarFiltrosTematica(); 
     mostrarProductos(productos); 
 };
