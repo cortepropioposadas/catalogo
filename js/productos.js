@@ -45,9 +45,8 @@ const productos = [
         precioPack: "No aplica",
         descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
         material: "---",
-        tematica: ["navidad", "profesores"],
+        tematica: "navidad",
         imagenes: [
-            "img/bolanavidadpersonalizada.jpg",
             "img/bolanavidadpersonalizada2.jpg",
             "img/bolanavidadpersonalizada3.jpg"
         ]
@@ -59,7 +58,7 @@ const productos = [
         precioPack: "60€ (Pack de 20 unid.) [-25%]",
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
-        tematica: ["Bautizo y comunión","imanes"],
+        tematica: ["Bautizo y comunión"],
         imagen: "img/imancomunion.jpg"
     },
     {
@@ -69,7 +68,7 @@ const productos = [
         precioPack: "Precio depende del tamaño",
         descripcion: "Letras con tipografia y medidas personalizadas.",
         material: "---",
-        tematica: ["Bautizo y comunión", "decoraciones", "navidad"],
+        tematica: ["Bautizo y comunión", "decoraciones"],
         imagen: "img/letras.jpg"
     },
     {
@@ -118,7 +117,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "---",
         material: "---",
-        tematica: ["decoraciones", "semana santa"],
+        tematica: ["llaveros", "semana santa"],
         imagenes: [
             "img/llavaeroimagennombress1.jpg",
             "img/llavaeroimagennombress2.jpg"
@@ -160,7 +159,7 @@ const productos = [
         precioPack: "---",
         descripcion: "Llavero con el nombre / apellido, lo que quiera y la imagen / forma de lo que más le guste, personalizable al 100%",
         material: "---",
-        tematica: ["llaveros", "motos"],
+        tematica: "llaveros",
         imagen:"img/llaveronombreforma.jpg"
     },
     {
@@ -231,20 +230,6 @@ const productos = [
     },
     {
         id: 18,
-        titulo: "Llavero nombre simple",
-        precioUnidad: 3.50,
-        precioPack: "---",
-        descripcion: "---",
-        material: "---",
-        tematica: ["llaveros"],
-        imagenes: [
-            "img/llaveronombresimpleblanco.jpg",
-            "img/llaveronombresimpleblanco1.jpg",
-            "img/llaveronombresimpleblanco2.jpg"
-        ]
-    },
-    {
-        id: 19,
         titulo: "Tablero ajedrez",
         precioUnidad: 8,
         precioPack: "---",
@@ -255,5 +240,15 @@ const productos = [
             "img/tableroajedez.jpg",
             "img/tableroajedez1.jpg"
         ]
+    },
+    {
+        id: 19,
+        titulo: "Bola navidad personalizada",
+        precioUnidad: 4.0,
+        precioPack: "No aplica",
+        descripcion: "Placa conmemorativa de gran tamaño con los nombres de todos los alumnos grabados.",
+        material: "---",
+        tematica: "profesores",
+        imagen: "img/bolanavidadpersonalizada.jpg"
     }
 ];
