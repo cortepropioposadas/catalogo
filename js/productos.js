@@ -19,7 +19,7 @@ const productos = [
         precioPack: "13,50€ (Pack de 10 unid.) [-10%]",
         descripcion: "Formas recortadas para llaveros, pulseras, collares... Podemos hacerlos en diferentes tipos de medidas y orificios.",
         material: "---",
-        tematica: ["llaveros", "abalorios", "comuniones", "bautizos"],
+        tematica: ["llaveros", "abalorios", "Bautizo y comunión"],
         imagenes: [
             "img/abaloriocruz.jpg",
             "img/abaloriocruzmariposa.jpg"
@@ -59,7 +59,7 @@ const productos = [
         precioPack: "60€ (Pack de 20 unid.) [-25%]",
         descripcion: "Imán con --- medidas, foto a elegir del niño.",
         material: "---",
-        tematica: ["comuniones","imanes"],
+        tematica: ["Bautizo y comunión","imanes"],
         imagen: "img/imancomunion.jpg"
     },
     {
@@ -69,7 +69,7 @@ const productos = [
         precioPack: "Precio depende del tamaño",
         descripcion: "Letras con tipografia y medidas personalizadas.",
         material: "---",
-        tematica: ["comuniones", "decoraciones", "navidad"],
+        tematica: ["Bautizo y comunión", "decoraciones", "navidad"],
         imagen: "img/letras.jpg"
     },
     {
@@ -84,12 +84,12 @@ const productos = [
     },
     {
         id: 8,
-        titulo: "Llavero bautizo puzle",
+        titulo: "Llavero evento puzle",
         precioUnidad: 3.50,
         precioPack: "52,50€ (Pack de 20 unid.) [-25%]",
         descripcion: "Llavero con los datos del niño, fecha, hora, lugar, personalizable al 100%",
         material: "---",
-        tematica: ["llaveros", "bautizos"],
+        tematica: ["llaveros", "Bautizo y comunión"],
         imagenes: [
             "img/llaverobautizo.jpg",
             "img/llaverobautizo2.jpg"
@@ -109,6 +109,151 @@ const productos = [
             "img/nombre2.jpg",
             "img/nombre3.jpg",
             "img/nombre4.jpg"
+        ]
+    },
+    {
+        id: 10,
+        titulo: "Llaveros con imagen y nombre",
+        precioUnidad: 4,
+        precioPack: "No disponible",
+        descripcion: "---",
+        material: "---",
+        tematica: ["decoraciones", "semana santa"],
+        imagenes: [
+            "img/llavaeroimagennombress1.jpg",
+            "img/llavaeroimagennombress2.jpg"
+        ]
+    },
+    {
+        id: 11,
+        titulo: "Llavero evento circular",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "Llavero con los datos del niño, fecha, hora, lugar, personalizable al 100%",
+        material: "---",
+        tematica: ["llaveros", "Bautizo y comunión"],
+        imagenes: [
+            "img/llaverocomunion1.jpg",
+            "img/llaverocomunion2.jpg"
+        ]
+    },
+    {
+        id: 12,
+        titulo: "Llavero empresa",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "Llavero con el logo de la empresa",
+        material: "---",
+        tematica: "llaveros",
+        imagenes: [
+            "img/llaveroempresa2.jpg",
+            "img/llaveroempresa3.jpg",
+            "img/llaveroempresa4.jpg",
+            "img/llaveroempresa1.jpg",
+            "img/llaveroempresa5.jpg",
+        ]
+    },
+    {
+        id: 13,
+        titulo: "Llavero nombre con forma",
+        precioUnidad: 4,
+        precioPack: "---",
+        descripcion: "Llavero con el nombre / apellido, lo que quiera y la imagen / forma de lo que más le guste, personalizable al 100%",
+        material: "---",
+        tematica: ["llaveros", "motos"],
+        imagen:"img/llaveronombreforma.jpg"
+    },
+    {
+        id: 14,
+        titulo: "Llavero nombre relieve",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagen:  "img/llaveronombrerelieve.jpg" 
+    },
+    {
+        id: 14,
+        titulo: "Llavero nombre simple",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagenes: [
+            "img/llaveronombresimple.jpg",
+            "img/llaveronombresimple1.jpg",
+            "img/llaveronombresimple2.jpg",
+            "img/llaveronombresimple3.jpg",
+            "img/llaverosnombres.jpg",
+            "img/llaverosnombresconjunto1.jpg"
+        ]
+    },
+    {
+        id: 15,
+        titulo: "Llavero nombre simple",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagenes: [
+            "img/llaveronombresimpleblanco.jpg",
+            "img/llaveronombresimpleblanco1.jpg",
+            "img/llaveronombresimpleblanco2.jpg",
+            "img/llaverosnombres.jpg",
+            "img/llaverosnombresconjunto1.jpg"
+        ]
+    },
+    {
+        id: 16,
+        titulo: "Llavero nombre simple",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagenes: [
+            "img/llaveronombresimplemetraquilato.jpg",
+            "img/llaveronombresimplemetraquilato1.jpg"
+        ]
+    },
+    {
+        id: 17,
+        titulo: "Llavero imagen",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagen:  "img/llaverosemanasanta.jpg",
+    },
+    {
+        id: 18,
+        titulo: "Llavero nombre simple",
+        precioUnidad: 3.50,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: ["llaveros"],
+        imagenes: [
+            "img/llaveronombresimpleblanco.jpg",
+            "img/llaveronombresimpleblanco1.jpg",
+            "img/llaveronombresimpleblanco2.jpg"
+        ]
+    },
+    {
+        id: 19,
+        titulo: "Tablero ajedrez",
+        precioUnidad: 8,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "Juegos de mesa",
+        imagenes: [
+            "img/tableroajedez.jpg",
+            "img/tableroajedez1.jpg"
         ]
     }
 ];
