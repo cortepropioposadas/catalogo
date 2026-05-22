@@ -116,16 +116,17 @@ const productos = [
     },
     {
         id: 10,
-        titulo: "Llavero cofrade personalizado",
+        titulo: "Llavero imagen + nombre personalizado",
         precioUnidad: 4.50,
         precioPack: "No disponible",
-        descripcion: "Incluye el emblema o la imagen que elijas junto a tu nombre. Un detalle ideal para tu hermandad o agrupación. Las medidas finales pueden variar para adaptarse perfectamente al diseño solicitado. Incluye cadenita metálica lista para colgar.",
+        descripcion: "Incluye el emblema o la imagen que elijas junto a tu nombre. Un detalle ideal para tu hermandad, agrupación, equipo de fútbol... Las medidas finales pueden variar para adaptarse perfectamente al diseño solicitado. Incluye cadenita metálica lista para colgar.",
         material: "MDF",
         tematica: ["llaveros", "semana santa"],
         imagenes: [
             "img/llavaeroimagennombress1.jpg",
             "img/llavaeroimagennombress2.jpg",
-            "img/llaveroimagen.jpg"
+            "img/llaveroimagen.jpg",
+            "img/llaverofutbolnombre.jpg"
         ]
     },
     {
