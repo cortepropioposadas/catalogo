@@ -278,7 +278,7 @@ const productos = [
         descripcion: "Llaveros como detalle de comunión o bautizo.",
         material: "---",
         tematica: ["Bautizo y comunión"],
-         imagenes: [
+        imagenes: [
             "img/llaveroscaras.jpg",
             "img/llaveroscaras1.jpg"
         ]
@@ -291,7 +291,7 @@ const productos = [
         descripcion: "---",
         material: "---",
         tematica: "llaveros",
-        imagen:  "img/llaveroimagencolor.jpg",
+        imagen:  "img/llaveroimagencolor.jpg"
     },
     {
         id: 24,
@@ -301,6 +301,21 @@ const productos = [
         descripcion: "---",
         material: "---",
         tematica: "decoración",
-        imagen:  "img/cuadro.jpg",
+        imagen:  "img/cuadro.jpg"
+    },
+    {
+        id: 25,
+        titulo: "Abanico",
+        precioUnidad: 0,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "Abanicos",
+         imagenes: [
+            "img/abanico1.jpg",
+            "img/abanico2.jpg",
+            "img/abanico3.jpg",
+            "img/abanico4.jpg"
+        ]
     }
 ];
