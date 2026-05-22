@@ -173,7 +173,7 @@ const productos = [
         imagen:  "img/llaveronombrerelieve.jpg" 
     },
     {
-        id: 14,
+        id: 15,
         titulo: "Llavero nombre simple",
         precioUnidad: 3.50,
         precioPack: "---",
@@ -190,7 +190,7 @@ const productos = [
         ]
     },
     {
-        id: 15,
+        id: 16,
         titulo: "Llavero nombre simple",
         precioUnidad: 3.50,
         precioPack: "---",
@@ -206,7 +206,7 @@ const productos = [
         ]
     },
     {
-        id: 16,
+        id: 17,
         titulo: "Llavero nombre simple",
         precioUnidad: 3.50,
         precioPack: "---",
@@ -219,7 +219,7 @@ const productos = [
         ]
     },
     {
-        id: 17,
+        id: 18,
         titulo: "Llavero imagen",
         precioUnidad: 3.50,
         precioPack: "---",
@@ -229,7 +229,7 @@ const productos = [
         imagen:  "img/llaverosemanasanta.jpg",
     },
     {
-        id: 18,
+        id: 19,
         titulo: "Tablero ajedrez",
         precioUnidad: 8,
         precioPack: "---",
@@ -242,7 +242,7 @@ const productos = [
         ]
     },
     {
-        id: 19,
+        id: 20,
         titulo: "Bola navidad personalizada",
         precioUnidad: 4.0,
         precioPack: "No aplica",
@@ -250,5 +250,18 @@ const productos = [
         material: "---",
         tematica: "profesores",
         imagen: "img/bolanavidadpersonalizada.jpg"
+    },
+    {
+        id: 21,
+        titulo: "Boligrafos",
+        precioUnidad: 4.0,
+        precioPack: "No aplica",
+        descripcion: "Boligrafo personalizado, ya sea para comunión, boda, regalo de graduación...",
+        material: "---",
+        tematica: ["profesores", "Bautizo y comunión"],
+         imagenes: [
+            "img/",
+            "img/"
+        ]
     }
 ];
