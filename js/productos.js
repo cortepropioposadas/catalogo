@@ -138,7 +138,8 @@ const productos = [
         tematica: ["llaveros", "eventos"],
         imagenes: [
             "img/llaverocomunion1.jpg",
-            "img/llaverocomunion2.jpg"
+            "img/llaverocomunion2.jpg",
+            "img/llaveroscomunion3.jpg"
         ]
     },
     {
@@ -284,7 +285,8 @@ const productos = [
         tematica: ["llaveros", "eventos"],
         imagenes: [
             "img/llaveroscaras.jpg",
-            "img/llaveroscaras1.jpg"
+            "img/llaveroscaras1.jpg",
+            "img/llaverosretrato.jpg"
         ]
     },
     {
@@ -295,7 +297,10 @@ const productos = [
         descripcion: "Llavero personalizado con grabado láser y pintado a mano a todo color. Un acabado artesanal y muy llamativo, perfecto para dar vida a tu logotipo, diseño de asociación o evento. (El diseño de la imagen es un ejemplo de nuestro trabajo a medida).",
         material: "MDF",
         tematica: "llaveros",
-        imagen:  "img/llaveroimagencolor.jpg"
+        imagenes: [
+            "img/llaveroimagencolor.jpg",
+            "img/llaveropintado.jpg"
+        ]
     },
     {
         id: 24,
