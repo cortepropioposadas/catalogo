@@ -181,7 +181,7 @@ const productos = [
         id: 15,
         titulo: "Llavero nombre simple",
         precioUnidad: 3.50,
-        precioPack: "---",
+        precioPack: "No disponible",
         descripcion: "Un diseño clásico, ligero y perfecto para el día a día. El tamaño aproximado es de 5 cm de largo, adaptándose proporcionalmente según la cantidad de letras del nombre elegido.",
         material: "MDF",
         tematica: "llaveros",
@@ -198,7 +198,7 @@ const productos = [
         id: 16,
         titulo: "Llavero nombre simple",
         precioUnidad: 3.50,
-        precioPack: "---",
+        precioPack: "No disponible",
         descripcion: "Ideal para nombres compuestos, frases cortas, colegios o asociaciones. El tamaño aproximado es de 6 cm, ajustándose en función de la longitud del texto elegido.",
         material: "MDF lacado en blanco",
         tematica: "llaveros",
@@ -237,7 +237,7 @@ const productos = [
         id: 19,
         titulo: "Tablero de ajedrez",
         precioUnidad: 8.00,
-        precioPack: "---",
+        precioPack: "No disponible",
         descripcion: "Tablero de ajedrez clásico con cuadrícula y coordenadas grabadas a láser. Ideal para amantes de los juegos de mesa tradicionales. (Nota: El tamaño exacto está pendiente de confirmación. Las piezas no están incluidas en el precio base; consultar disponibilidad y precio del juego completo).",
         material: "MDF",
         tematica: "Juegos de mesa",
@@ -253,7 +253,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "El detalle perfecto para regalar a los profesores ('Seño', 'Profe', etc.) y agradecerles su labor durante el curso. Diseño elegante con copos de nieve y el nombre integrado en el interior. Tamaño: 9 cm de diámetro.",
         material: "MDF",
-        tematica: "profesores",
+        tematica: ["profesores","navidad"],
         imagen: "img/bolanavidadpersonalizada.jpg"
     },
     {
@@ -413,6 +413,18 @@ const productos = [
             "img/lampara2.jpg",
             "img/lampara3.jpg",
             "img/lampara4.jpg"
+        ]
+    },
+    {
+        id: 33,
+        titulo: "Cuadro Natalicio",
+        precioUnidad: 22.00,
+        precioPack: "No disponible",
+        descripcion: "Precioso marco de fotos de mesa personalizado con los datos de nacimiento del bebé (nombre, fecha, peso y altura). Un recuerdo único, emotivo y 100% modificable a tu gusto. Diseñado para colocar una fotografía estándar de 10x15 cm. Tamaño total aproximado: 25 cm de ancho.",
+        material: "MDF",
+        tematica: ["eventos", "decoración"],
+        imagenes: [
+            "img/cuadrobautizodatos.jpg"
         ]
     }
 ];
