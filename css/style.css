@@ -319,6 +319,34 @@ header {
     cursor: pointer;
 }
 
+/* Flechas del Modal Carrusel */
+.modal-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10000;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--c-texto);
+}
+
+.modal-btn.prev { left: 5%; }
+.modal-btn.next { right: 5%; }
+
 /* ========================================= */
 /* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
 /* ========================================= */
@@ -441,6 +469,14 @@ header {
         height: 24px;
         font-size: 0.7rem;
     }
+    /* Flechas del modal más pequeñas en móvil */
+    .modal-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .modal-btn.prev { left: 2%; }
+    .modal-btn.next { right: 2%; }
     
 }
 
