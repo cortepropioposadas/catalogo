@@ -390,10 +390,10 @@ const productos = [
         material: "MDF",
         tematica: ["eventos","decoración"],
         imagenes: [
-            "img/letrasfirmas.jpg",
-            "img/letrasfirmas1.jpg",
-            "img/letrasfirmas2.jpg",
-            "img/letrasfirmas3.jpg"
+            "img/letrafirmas.jpg",
+            "img/letrafirmas1.jpg",
+            "img/letrafirmas2.jpg",
+            "img/letrafirmas3.jpg"
         ]
     },
     {
