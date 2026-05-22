@@ -47,10 +47,12 @@
         </main>
     </div>
 
-    <!-- 1. Primero cargamos la base de datos -->
-    <script src="js/productos.js"></script>
+    <div id="image-modal" class="modal-oculto" onclick="cerrarModal()">
+        <span class="cerrar-modal">&times;</span>
+        <img id="modal-img" src="" alt="Imagen ampliada">
+    </div>  
     
-    <!-- 2. Luego cargamos el motor que pinta la web -->
+    <script src="js/productos.js"></script>
     <script src="js/app.js"></script>
     
 </body>
