@@ -49,8 +49,10 @@
 
     <div id="image-modal" class="modal-oculto" onclick="cerrarModal()">
         <span class="cerrar-modal">&times;</span>
-        <img id="modal-img" src="" alt="Imagen ampliada">
-    </div>  
+        <button class="modal-btn prev" id="modal-prev" onclick="cambiarImagenModal(-1, event)">&#10094;</button>
+        <img id="modal-img" src="" alt="Imagen ampliada" onclick="event.stopPropagation()">
+        <button class="modal-btn next" id="modal-next" onclick="cambiarImagenModal(1, event)">&#10095;</button>
+    </div>
     
     <script src="js/productos.js"></script>
     <script src="js/app.js"></script>
