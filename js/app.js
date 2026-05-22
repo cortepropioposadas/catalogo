@@ -62,7 +62,7 @@ function mostrarProductos(listaProductos) {
 
         let slidesHTML = arrayFotos.map(imgSrc => `
             <div class="carousel-slide">
-                <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy">
+                <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy" onclick="abrirModal('${imgSrc}')" style="cursor: zoom-in;">
             </div>
         `).join('');
 
@@ -161,6 +161,21 @@ function aplicarFiltros() {
     }
 
     mostrarProductos(productosFiltrados);
+}
+
+// === FUNCIONES DEL MODAL (IMAGEN GRANDE) ===
+function abrirModal(srcImagen) {
+    const modal = document.getElementById('image-modal');
+    const imagenModal = document.getElementById('modal-img');
+    imagenModal.src = srcImagen;
+    modal.classList.remove('modal-oculto');
+    modal.classList.add('modal-visible');
+}
+
+function cerrarModal() {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('modal-visible');
+    modal.classList.add('modal-oculto');
 }
 
 window.onload = () => {
