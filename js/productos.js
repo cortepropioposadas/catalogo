@@ -12,7 +12,7 @@ const productos = [
         tematica: ["llaveros", "friki"],
         imagenes: [
             "img/llaveroanime.jpg",
-            "img/llaveroanime1.jpg"
+            "img/llaveroanime1.jpeg"
         ]
     },
     {
