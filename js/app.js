@@ -131,6 +131,9 @@ function moverCarrusel(evento, direccion) {
 }
 
 function aplicarFiltros() {
+    document.querySelectorAll('.filter-option').forEach(label => label.classList.remove('activa'));
+    document.querySelectorAll('input[type="radio"]:checked').forEach(radio => radio.parentElement.classList.add('activa'));
+
     const tematicaSeleccionada = document.querySelector('input[name="tematica"]:checked').value;
     const precioSeleccionado = document.querySelector('input[name="precio"]:checked').value;
 
@@ -162,5 +165,5 @@ function aplicarFiltros() {
 
 window.onload = () => {
     generarFiltrosTematica(); 
-    mostrarProductos(productos); 
+    aplicarFiltros();
 };
