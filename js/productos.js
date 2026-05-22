@@ -313,12 +313,78 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Combate el calor con estilo y un toque de humor. Opciones de personalización: Solo frase (15€) | Frase + dibujo simple (20€) | Caricatura/rostro + frase (25€).",
         material: "Madera y tela",
-        tematica: ["Abanicos" "eventos"],
+        tematica: ["abanicos", "eventos"],
         imagenes: [
             "img/abanico2.jpg",
             "img/abanico1.jpg",
             "img/abanico3.jpg",
             "img/abanico4.jpg"
         ]
-    }
+    },
+    {
+        id: 26,
+        titulo: "Árbol de navidad decorativo",
+        precioUnidad: 10.00,
+        precioPack: "No disponible",
+        descripcion: "Ideal para decorar cualquier rincón de tu hogar. El diseño estándar con las palabras de la imagen (Fe, Paz, Amor, Familia, Felicidad) cuesta 10€. Si prefieres modificar las palabras y hacerlo 100% personalizado con tus propios textos o nombres, el precio es de 15€. Tamaño: 25 cm aproximadamente.",
+        material: "MDF",
+        tematica: ["navidad", "decoración"],
+        imagenes: [
+            "img/arbolnavidad.jpg"
+        ]
+    }, 
+    {
+        id: 27,
+        titulo: "Medallero deportivo personalizado",
+        precioUnidad: 20.00,
+        precioPack: "No disponible",
+        descripcion: "Exhibidor de medallas de madera, ideal para que los campeones de la casa luzcan sus logros. Personalizable con el nombre y la silueta del deporte o afición que prefieras (fútbol, gimnasia, ciclismo...). Un regalo original para motivar y decorar. Tamaño aproximado: 40 cm de ancho.",
+        material: "MDF",
+        tematica: "decoración",
+        imagenes: [
+            "img/medallero1.jpg",
+            "img/medallero2.jpg"
+        ]
+    },
+    {
+        id: 28,
+        titulo: "Catavino grabado",
+        precioUnidad: 0.00,
+        precioPack: "Preguntar disponibilidad",
+        descripcion: "Un detalle elegante, clásico y muy nuestro para bodas, aniversarios o eventos especiales. Opciones: Solo texto (11€/ud) | Imagen sencilla + nombre (15€/ud).",
+        material: "Cristal",
+        tematica: ["eventos","decoración"],
+        imagenes: [
+            "img/catavinos.jpg"
+        ]
+    },
+    {
+        id: 29,
+        titulo: "Cuadro guerrero anime personalizado",
+        precioUnidad: 11.00,
+        precioPack: "No disponible",
+        descripcion: "Cuadro circular decorativo de madera en 3D inspirado en personajes clásicos de anime. Personalizable con el nombre en relieve. Puedes elegir el color de la base (sujeto a disponibilidad). Tamaño aproximado: 18 cm de diámetro.",
+        material: "MDF",
+        tematica: ["friki","decoración"],
+        imagenes: [
+            "img/cuadrofriki.jpg",
+            "img/cuadrofriki1.jpg"
+        ]
+    },
+    {
+        id: 30,
+        titulo: "Letra gigante para firmas",
+        precioUnidad: 75.00,
+        precioPack: "No disponible",
+        descripcion: "Letra inicial gigante de madera, ideal como alternativa original al clásico libro de firmas (¡que luego nunca se mira!). Perfecta para que los invitados dejen sus firmas, huellas o mensajes en bodas, comuniones o bautizos, y luego usarla como decoración en casa. Personalizable con nombre en relieve, fecha o dibujo. El tamaño máximo es 90x60cm.",
+        material: "MDF",
+        tematica: ["eventos","decoración"],
+        imagenes: [
+            "img/letrasfirmas.jpg",
+            "img/letrasfirmas1.jpg",
+            "img/letrasfirmas2.jpg",
+            "img/letrasfirmas3.jpg"
+        ]
+    },
+    
 ];
