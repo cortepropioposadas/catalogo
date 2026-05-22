@@ -435,5 +435,17 @@ const productos = [
         imagenes: [
             "img/cuadrobautizodatos.jpg"
         ]
+    },
+    {
+        id: 34,
+        titulo: "Llavero de silueta animada",
+        precioUnidad: 3.50,
+        precioPack: "Apartir de 10 unidades -5%",
+        descripcion: "Presenta la silueta de personajes clásicos del cine de animación y los videojuegos. Un accesorio ligero, resistente y perfecto para lucir tus aficiones o hacer un regalo original.",
+        material: "MDF",
+        tematica: ["llaveros", "friki"],
+        imagenes: [
+            "img/llaveroimagen.jpg"
+        ]
     }
 ];
