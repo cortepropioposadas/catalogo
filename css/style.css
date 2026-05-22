@@ -1,11 +1,11 @@
 /* === PALETA DE COLORES OFICIAL === */
 :root {
-    --c-azul: #435ac2;    /* Azul Principal */
-    --c-rojo: #d82929;    /* Rojo Contraste */
-    --c-mostaza: #ffbd59; /* Mostaza/Madera Accent */
-    --c-gris: #d9d9d9;    /* Gris Bordes */
-    --c-texto: #1a1a1a;   /* Texto Principal */
-    --c-fondo: #fcfcfc;  /* Fondo Limpio */
+    --c-azul: #435ac2;
+    --c-rojo: #d82929;
+    --c-mostaza: #ffbd59;
+    --c-gris: #d9d9d9;
+    --c-texto: #1a1a1a;
+    --c-fondo: #fcfcfc;
 }
 
 * {
@@ -18,8 +18,6 @@ body {
     font-family: 'Jost', sans-serif;
     background-color: var(--c-fondo);
     color: var(--c-texto);
-    font-size: 16px; /* Base ligeramente más grande para mayor comodidad visual */
-    line-height: 1.6;
 }
 
 /* HEADER */
@@ -36,11 +34,10 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--c-texto);
 }
 
 .logo span { color: var(--c-azul); }
@@ -48,8 +45,8 @@ header {
 /* CONTENEDOR PRINCIPAL (Layout a 2 columnas) */
 .layout-grid {
     display: grid;
-    grid-template-columns: 280px 1fr; /* Sidebar ligeramente más ancha */
-    gap: 2.5rem;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
     max-width: 1400px;
     margin: 2rem auto;
     padding: 0 2rem;
@@ -58,7 +55,7 @@ header {
 /* BARRA LATERAL (Filtros) */
 .sidebar {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--c-gris);
     height: fit-content;
@@ -67,8 +64,8 @@ header {
 }
 
 .sidebar h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--c-gris);
     color: var(--c-azul);
@@ -80,25 +77,21 @@ header {
 
 .filter-option {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     cursor: pointer;
-    font-size: 1rem;
-    color: #444; /* Un poco más oscuro para lectura */
+    font-size: 0.95rem;
 }
 
 .filter-option input {
-    margin-right: 10px;
-    width: 18px; /* Inputs ligeramente más grandes para fácil clic */
-    height: 18px;
+    margin-right: 8px;
     accent-color: var(--c-azul);
-    vertical-align: middle;
 }
 
 /* CUADRÍCULA DE PRODUCTOS */
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tarjetas ligeramente más grandes */
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 /* TARJETAS DE PRODUCTO */
@@ -107,86 +100,80 @@ header {
     border-radius: 12px;
     border: 1px solid var(--c-gris);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(67, 90, 194, 0.1); /* Sombra suave azulada */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     border-color: var(--c-azul);
 }
 
-/* Marcador de posición para imagen cuando se carga */
 .card-img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: var(--c-gris); /* Gris de marca */
+    background-color: var(--c-gris);
     object-fit: cover;
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .etiqueta-tematica {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--c-rojo); /* Usamos el rojo secundario aquí */
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.5px;
+    color: var(--c-rojo);
+    margin-bottom: 0.5rem;
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
     line-height: 1.3;
-    color: var(--c-texto);
 }
 
 .card-desc {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #666;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
-/* === APLICAMOS EL COLOR MOSTAZA AQUÍ === */
 .card-detalles {
-    font-size: 0.9rem;
-    background-color: rgba(255, 189, 89, 0.15); /* Usamos un tono suave del mostaza de marca */
-    padding: 0.8rem;
+    font-size: 0.8rem;
+    background: var(--c-fondo);
+    padding: 0.5rem;
     border-radius: 6px;
-    margin-bottom: 1.2rem;
-    border: 1px solid rgba(255, 189, 89, 0.3);
+    margin-bottom: 1rem;
 }
 
 .precio-box {
     margin-top: auto;
     border-top: 1px solid var(--c-gris);
-    padding-top: 1.2rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
 .precio-unidad {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--c-azul);
 }
 
 .precio-pack {
-    font-size: 0.85rem;
-    color: #888;
+    font-size: 0.8rem;
+    color: #777;
     text-align: right;
-    line-height: 1.2;
 }
 
 .btn-dm {
@@ -196,34 +183,181 @@ header {
     background-color: var(--c-azul);
     color: white;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
-    margin-top: 1.2rem;
-    transition: background 0.3s, transform 0.1s;
+    margin-top: 1rem;
+    transition: background 0.2s;
 }
 
 .btn-dm:hover {
-    background-color: var(--c-rojo); /* Cambio a rojo secundario al hover */
-    transform: scale(1.02);
+    background-color: var(--c-rojo);
 }
 
-.btn-dm:active {
-    transform: scale(0.98);
+/* === CARRUSEL DE IMÁGENES (Añadir al final del CSS) === */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--c-gris);
 }
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+    scroll-behavior: smooth;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Oculta la barra en Chrome/Safari */
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Flechas del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-azul);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+    z-index: 10;
+}
+
+.carousel-btn:hover { background: white; }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+
+/* Ocultar el circulito del radio button */
+.filter-option input {
+    display: none; 
+}
+
+/* Diseño base de la "píldora" para ordenador y móvil SIEMPRE */
+.filter-option {
+    display: inline-block; /* Para que parezcan botones */
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--c-gris);
+    background: white;
+    font-size: 0.85rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* El estilo de cuando está seleccionado (activado por JavaScript) */
+.filter-option.activa {
+    background-color: var(--c-azul) !important;
+    color: white !important;
+    border-color: var(--c-azul) !important;
+}
+
+/* === MODAL DE IMAGEN (LIGHTBOX) === */
+.modal-oculto {
+    display: none !important;
+}
+
+.modal-visible {
+    display: flex !important;
+    position: fixed;
+    z-index: 9999; /* Para que quede por encima de todo el catálogo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+#modal-img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    object-fit: contain;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Flechas del Modal Carrusel */
+.modal-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10000;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--c-texto);
+}
+
+.modal-btn.prev { left: 5%; }
+.modal-btn.next { right: 5%; }
 
 /* ========================================= */
-/* === ADAPTACIÓN MÓVIL (SÚPER IMPORTANTE) === */
+/* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
 /* ========================================= */
 
 @media (max-width: 768px) {
     /* 1. Header centrado y compacto */
     header {
         padding: 1rem;
+        text-align: center;
         flex-direction: column;
         gap: 5px;
-        text-align: center;
     }
 
     /* 2. Layout principal sin márgenes laterales gigantes */
@@ -249,7 +383,7 @@ header {
     }
 
     .filter-group h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 8px;
         border: none;
     }
@@ -269,28 +403,15 @@ header {
         display: none;
     }
 
-    /* El "botón" del filtro arreglado */
     .filter-option {
         display: flex;
         align-items: center;
-        white-space: nowrap; /* Evita que el texto rompa la caja */
-        padding: 8px 16px;
-        border-radius: 20px;
-        border: 1px solid var(--c-gris);
-        background: white;
-        font-size: 0.9rem;
-        margin: 0;
+        white-space: nowrap; 
         height: fit-content;
-    }
-
-    /* Ocultamos el circulito del radio button */
-    .filter-option input {
         margin: 0;
-        margin-right: 0px; 
-        display: none; 
     }
 
-    /* 4. LA CUADRÍCULA A 2 COLUMNAS (Clave para UX en mayores de 40) */
+    /* 4. LA CUADRÍCULA A 2 COLUMNAS */
     .productos-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
@@ -299,17 +420,18 @@ header {
 
     /* 5. Ajustes de tarjeta para que quepa todo en 2 columnas */
     .card-body {
-        padding: 0.8rem;
+        padding: 0.6rem;
     }
 
     .etiqueta-tematica {
-        font-size: 0.7rem;
-        margin-bottom: 0.4rem;
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
     }
 
     .card-title {
-        font-size: 1rem; /* Título más pequeño */
-        margin-bottom: 0.4rem;
+        font-size: 0.85rem; /* Título más pequeño */
+        margin-bottom: 0.3rem;
+        line-height: 1.2;
     }
 
     /* Ocultamos la descripción en móvil para no saturar la pantalla */
@@ -318,27 +440,42 @@ header {
     }
 
     .card-detalles {
-        font-size: 0.75rem;
-        padding: 6px;
-        margin-bottom: 0.8rem;
+        font-size: 0.7rem;
+        padding: 4px;
+        margin-bottom: 0.5rem;
     }
 
     .precio-box {
-        padding-top: 0.8rem;
+        padding-top: 0.5rem;
     }
 
     .precio-unidad {
-        font-size: 1.1rem; /* Precio un poco más ajustado */
+        font-size: 0.95rem; /* Precio un poco más ajustado */
     }
 
     .precio-pack {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .btn-dm {
-        font-size: 0.85rem;
-        padding: 0.8rem;
-        margin-top: 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
     }
+
+    /* Hacemos las flechas del carrusel un poco más pequeñas */
+    .carousel-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+    /* Flechas del modal más pequeñas en móvil */
+    .modal-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .modal-btn.prev { left: 2%; }
+    .modal-btn.next { right: 2%; }
     
 }
