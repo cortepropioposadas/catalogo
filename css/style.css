@@ -261,11 +261,25 @@ header {
     display: none; 
 }
 
-/* Cambiar el estilo de la etiqueta cuando está seleccionada */
-.filter-option:has(input:checked) {
-    background-color: var(--c-azul);
-    color: white;
-    border-color: var(--c-azul);
+/* Diseño base de la "píldora" para ordenador y móvil SIEMPRE */
+.filter-option {
+    display: inline-block; /* Para que parezcan botones */
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--c-gris);
+    background: white;
+    font-size: 0.85rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* El estilo de cuando está seleccionado (activado por JavaScript) */
+.filter-option.activa {
+    background-color: var(--c-azul) !important;
+    color: white !important;
+    border-color: var(--c-azul) !important;
 }
 
 /* ========================================= */
@@ -324,18 +338,12 @@ header {
         display: none;
     }
 
-    /* El "botón" del filtro arreglado */
     .filter-option {
         display: flex;
         align-items: center;
-        white-space: nowrap; /* Evita que el texto rompa la caja */
-        padding: 6px 14px;
-        border-radius: 20px;
-        border: 1px solid var(--c-gris);
-        background: white;
-        font-size: 0.85rem;
-        margin: 0;
+        white-space: nowrap; 
         height: fit-content;
+        margin: 0;
     }
 
     /* 4. LA CUADRÍCULA A 2 COLUMNAS */
