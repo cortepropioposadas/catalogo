@@ -386,5 +386,32 @@ const productos = [
             "img/letrasfirmas3.jpg"
         ]
     },
-    
+    {
+        id: 31,
+        titulo: "Medalla graduación",
+        precioUnidad: 6.00,
+        precioPack: "Ver opciones de precio en descripción",
+        descripcion: "El recuerdo perfecto para celebrar el fin de curso, instituto o universidad. Incluye cinta para colgar (color sujeto a disponibilidad). Opciones: Genérica sin nombre (4,50€/ud) | Personalizada con nombre, promoción y logo (6,00€/ud) | Personalizada a doble cara con dedicatoria en el reverso (7,50€/ud).",
+        material: "MDF",
+        tematica: ["eventos","profesores"],
+        imagenes: [
+            "img/medallagraduacion1.jpg",
+            "img/medallasgraduacion.jpg"
+        ]
+    },
+    {
+        id: 32,
+        titulo: "Lámpara grabada (iluminación multicolor)",
+        precioUnidad: 25.00,
+        precioPack: "No disponible",
+        descripcion: "Incluye mando a distancia para controlar los colores. Funciona mediante cable USB (incluido, sin cabezal) o con pilas (no incluidas). Base disponible en color negro o blanco según stock. ¿Quieres ir un paso más allá? Hacemos grabados 100% personalizados a partir de fotografías (consultar precio).",
+        material: "Metracrilato y base LED (RGB)",
+        tematica: ["eventos", "decoración", "profesores"],
+        imagenes: [
+            "img/lampara1.jpg",
+            "img/lampara2.jpg",
+            "img/lampara3.jpg",
+            "img/lampara4.jpg"
+        ]
+    }
 ];
