@@ -260,8 +260,13 @@ const productos = [
         material: "---",
         tematica: ["profesores", "Bautizo y comunión"],
          imagenes: [
-            "img/",
-            "img/"
+            "img/boligrafobautizo.jpg",
+            "img/boligrafobautizo1.jpg",
+            "img/boligrafobautizo2.jpg",
+            "img/boligrafocomunion.jpg",
+            "img/boligrafocomunion1.jpg",
+            "img/boligrafocomunion2.jpg",
+            "img/boligrafocomunion3.jpg"
         ]
     }
 ];
