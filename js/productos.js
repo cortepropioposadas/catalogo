@@ -120,7 +120,8 @@ const productos = [
         tematica: ["llaveros", "semana santa"],
         imagenes: [
             "img/llavaeroimagennombress1.jpg",
-            "img/llavaeroimagennombress2.jpg"
+            "img/llavaeroimagennombress2.jpg",
+            "img/llaveroimagen.jpg"
         ]
     },
     {
@@ -254,7 +255,7 @@ const productos = [
     {
         id: 21,
         titulo: "Boligrafos",
-        precioUnidad: 4.0,
+        precioUnidad: 0,
         precioPack: "No aplica",
         descripcion: "Boligrafo personalizado, ya sea para comunión, boda, regalo de graduación...",
         material: "---",
@@ -268,5 +269,38 @@ const productos = [
             "img/boligrafocomunion2.jpg",
             "img/boligrafocomunion3.jpg"
         ]
+    },
+    {
+        id: 22,
+        titulo: "Llaveros caras",
+        precioUnidad: 0,
+        precioPack: "No aplica",
+        descripcion: "Llaveros como detalle de comunión o bautizo.",
+        material: "---",
+        tematica: ["Bautizo y comunión"],
+         imagenes: [
+            "img/llaveroscaras.jpg",
+            "img/llaveroscaras1.jpg"
+        ]
+    },
+    {
+        id: 23,
+        titulo: "Llavero imagen pintado a mano",
+        precioUnidad: 0,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "llaveros",
+        imagen:  "img/llaveroimagencolor.jpg",
+    },
+    {
+        id: 24,
+        titulo: "Cuadro familia",
+        precioUnidad: 0,
+        precioPack: "---",
+        descripcion: "---",
+        material: "---",
+        tematica: "decoración",
+        imagen:  "img/cuadro.jpg",
     }
 ];
