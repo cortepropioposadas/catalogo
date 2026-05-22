@@ -247,11 +247,11 @@ const productos = [
     },
     {
         id: 20,        
-        titulo: "Bola navidad personalizada",
-        precioUnidad: 4.0,
-        precioPack: "No aplica",
-        descripcion: "--- TAMAÑO 9 CM",
-        material: "---",
+        titulo: "Bola de navidad profesores",
+        precioUnidad: 4.00,
+        precioPack: "No disponible",
+        descripcion: "El detalle perfecto para regalar a los profesores ('Seño', 'Profe', etc.) y agradecerles su labor durante el curso. Diseño elegante con copos de nieve y el nombre integrado en el interior. Tamaño: 9 cm de diámetro.",
+        material: "MDF",
         tematica: "profesores",
         imagen: "img/bolanavidadpersonalizada.jpg"
     },
@@ -260,9 +260,9 @@ const productos = [
         titulo: "Boligrafos",
         precioUnidad: 1.80,
         precioPack: "Preguntar disponibilidad",
-        descripcion: "Boligrafo personalizado, ya sea para comunión, boda, regalo de graduación...",
-        material: "BAMBÚ, tinta aleatoria (posiblemente negra)",
-        tematica: ["profesores", "Bautizo y comunión"],
+        descripcion: "Un detalle práctico y elegante, perfecto para bodas, comuniones, graduaciones o regalos para profesores. Graba el nombre, la fecha o una frase corta para hacerlo único.",
+        material: "BAMBÚ, color de tinta sujeto a disponibilidad (habitualmente negro)",
+        tematica: ["profesores", "eventos"],
          imagenes: [
             "img/boligrafobautizo.jpg",
             "img/boligrafobautizo1.jpg",
@@ -275,12 +275,12 @@ const productos = [
     },
     {
         id: 22,
-        titulo: "Llaveros caras y fecha",
+        titulo: "Llaveros con retrato personalizado",
         precioUnidad: 0,
-        precioPack: "Desde 4,5€ dependiendo de los detalles de la imagen.",
-        descripcion: "Llaveros como detalle de comunión o bautizo.",
+        precioPack: "Desde 4,50€/unidad (dependiendo de los detalles de la imagen)",
+        descripcion: "Llavero de madera con retrato grabado a láser a partir de tu fotografía favorita. Un detalle sorprendente y único, ideal para regalar a los invitados de bautizos, comuniones o eventos especiales. Incluye la personalización con el nombre y la fecha.",
         material: "MDF lacado en blanco",
-        tematica: ["Bautizo y comunión"],
+        tematica: ["llaveros", "eventos"],
         imagenes: [
             "img/llaveroscaras.jpg",
             "img/llaveroscaras1.jpg"
@@ -289,19 +289,19 @@ const productos = [
     {
         id: 23,
         titulo: "Llavero imagen pintado a mano",
-        precioUnidad: 6,
-        precioPack: "más 10 unidades -5% y +20 unidades -10%",
-        descripcion: "---",
+        precioUnidad: 6.00,
+        precioPack: "+10 unidades -5% y +20 unidades -10%",
+        descripcion: "Llavero personalizado con grabado láser y pintado a mano a todo color. Un acabado artesanal y muy llamativo, perfecto para dar vida a tu logotipo, diseño de asociación o evento. (El diseño de la imagen es un ejemplo de nuestro trabajo a medida).",
         material: "MDF",
         tematica: "llaveros",
         imagen:  "img/llaveroimagencolor.jpg"
     },
     {
         id: 24,
-        titulo: "Cuadro familia",
-        precioUnidad: 35.5,
-        precioPack: "Para más o menos miembros familiares consultar diseño.",
-        descripcion: "---,Grabado y con marco de color negro o blanco a elección, tamaño 40x30 cm",
+        titulo: "Cuadro familiar",
+        precioUnidad: 35.50,
+        precioPack: "No disponible",
+        descripcion: "Cuadro decorativo de madera con grabado láser personalizado. Un diseño emotivo ideal para representar la unión de tu familia. Incluye marco a elegir en color negro o blanco. Tamaño: 40x30 cm. Para más o menos miembros familiares consultar diseño.",
         material: "MDF",
         tematica: "decoración",
         imagen:  "img/cuadro.jpg"
@@ -310,13 +310,13 @@ const productos = [
         id: 25,
         titulo: "Abanico",
         precioUnidad: 0,
-        precioPack: "---",
-        descripcion: "---",
-        material: "---",
-        tematica: "Abanicos",
-         imagenes: [
-            "img/abanico1.jpg",
+        precioPack: "No disponible",
+        descripcion: "Combate el calor con estilo y un toque de humor. Opciones de personalización: Solo frase (15€) | Frase + dibujo simple (20€) | Caricatura/rostro + frase (25€).",
+        material: "Madera y tela",
+        tematica: ["Abanicos" "eventos"],
+        imagenes: [
             "img/abanico2.jpg",
+            "img/abanico1.jpg",
             "img/abanico3.jpg",
             "img/abanico4.jpg"
         ]
