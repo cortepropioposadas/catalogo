@@ -256,6 +256,18 @@ header {
 .carousel-btn.next { right: 10px; }
 
 
+/* Ocultar el circulito del radio button */
+.filter-option input {
+    display: none; 
+}
+
+/* Cambiar el estilo de la etiqueta cuando está seleccionada */
+.filter-option:has(input:checked) {
+    background-color: var(--c-azul);
+    color: white;
+    border-color: var(--c-azul);
+}
+
 /* ========================================= */
 /* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
 /* ========================================= */
