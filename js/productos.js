@@ -48,7 +48,7 @@ const productos = [
         precioPack: "No aplica pack",
         descripcion: "Adorno de navidad personalizable con el nombre que elijas y un elegante diseño. Ideal para darle un toque único y especial a la decoración de tu árbol. Diámetro: 9 cm.",
         material: "MDF",
-        tematica: "navidad",
+        tematica: ["navidad"],
         imagenes: [
             "img/bolanavidadpersonalizada2.jpg",
             "img/bolanavidadpersonalizada3.jpg",
@@ -62,7 +62,7 @@ const productos = [
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Imán de madera personalizado, ideal como detalle inolvidable para invitados. Incluye espacio tipo marco para la fotografía que elijas y grabado láser con el nombre y la fecha del evento. Altura: 9 cm.",
         material: "MDF",
-        tematica: "eventos",
+        tematica: ["eventos"],
         imagen: "img/imancomunion.jpg"
     },
     {
@@ -82,7 +82,7 @@ const productos = [
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Llavero con diseño de silueta de caballo. Incluye cadenita metálica lista para colgar. Altura aproximada: 4 cm.",
         material: "MDF",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagen: "img/llaverocaballo.jpg"
     },
     {
@@ -116,17 +116,16 @@ const productos = [
     },
     {
         id: 10,
-        titulo: "Llavero imagen + nombre personalizado",
+        titulo: "Llavero cofrade personalizado",
         precioUnidad: 4.50,
         precioPack: "No disponible",
-        descripcion: "Incluye el emblema o la imagen que elijas junto a tu nombre. Un detalle ideal para tu hermandad, agrupación, equipo de fútbol... Las medidas finales pueden variar para adaptarse perfectamente al diseño solicitado. Incluye cadenita metálica lista para colgar.",
+        descripcion: "Incluye el emblema o la imagen que elijas junto a tu nombre. Un detalle ideal para tu hermandad o agrupación. Las medidas finales pueden variar para adaptarse perfectamente al diseño solicitado. Incluye cadenita metálica lista para colgar.",
         material: "MDF",
         tematica: ["llaveros", "semana santa"],
         imagenes: [
             "img/llavaeroimagennombress1.jpg",
             "img/llavaeroimagennombress2.jpg",
-            "img/llaveroimagen.jpg",
-            "img/llaverofutbolnombre.jpg"
+            "img/llaverohermandad.jpg"
         ]
     },
     {
@@ -150,7 +149,7 @@ const productos = [
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Llavero con el logotipo de tu empresa o negocio mediante grabado láser. Un artículo ideal como merchandising, fidelización de clientes o regalo corporativo. El diseño y el corte se adaptan a la forma de tu marca. Tamaño de referencia: entre 4,5 y 5 cm.",
         material: "MDF",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveroempresa2.jpg",
             "img/llaveroempresa3.jpg",
@@ -166,8 +165,12 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Elige la silueta que más te guste (aficiones, piezas mecánicas, animales...) y añade el nombre o apellido que prefieras. Un detalle único, original y hecho totalmente a medida.",
         material: "MDF",
-        tematica: "llaveros",
-        imagen:"img/llaveronombreforma.jpg"
+        tematica: ["llaveros", "friki"],
+        imagenes: [
+            "img/llaveronombreforma.jpg",
+            "img/llaveroimagen.jpg",
+            "img/llaverofutbolnombre.jpg"
+        ]
     },
     {
         id: 14,
@@ -176,7 +179,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Con efecto 3D. Tu nombre destacado en relieve sobre una base sólida. El tamaño aproximado es de 4,5 cm de largo, aunque variará ligeramente dependiendo de la cantidad de letras del nombre elegido.",
         material: "MDF",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagen:  "img/llaveronombrerelieve.jpg" 
     },
     {
@@ -186,7 +189,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Un diseño clásico, ligero y perfecto para el día a día. El tamaño aproximado es de 5 cm de largo, adaptándose proporcionalmente según la cantidad de letras del nombre elegido.",
         material: "MDF",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveronombresimple.jpg",
             "img/llaveronombresimple1.jpg",
@@ -203,7 +206,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Ideal para nombres compuestos, frases cortas, colegios o asociaciones. El tamaño aproximado es de 6 cm, ajustándose en función de la longitud del texto elegido.",
         material: "MDF lacado en blanco",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveronombresimpleblanco.jpg",
             "img/llaveronombresimpleblanco1.jpg",
@@ -219,7 +222,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Un diseño moderno, resistente y con un acabado elegante. El tamaño aproximado es de 4 cm, ajustándose proporcionalmente a la cantidad de letras del nombre.",
         material: "METACRILATO",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveronombresimplemetraquilato.jpg",
             "img/llaveronombresimplemetraquilato1.jpg"
@@ -231,7 +234,7 @@ const productos = [
         precioUnidad: 4.00,
         precioPack: "No disponible",
         descripcion: "Llavero circular de madera con grabado láser detallado de temática religiosa. Un detalle ideal para cofrades, hermandades o como recuerdo especial. Tamaño aproximado: 5 cm de diámetro.",
-        material: "---",
+        material: "MDF",
         tematica: ["llaveros", "semana santa"],
         imagen:  "img/llaverosemanasanta.jpg",
     },
@@ -242,7 +245,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Tablero de ajedrez clásico con cuadrícula y coordenadas grabadas a láser. Ideal para amantes de los juegos de mesa tradicionales. (Nota: El tamaño exacto está pendiente de confirmación. Las piezas no están incluidas en el precio base; consultar disponibilidad y precio del juego completo).",
         material: "MDF",
-        tematica: "Juegos de mesa",
+        tematica: ["Juegos de mesa"],
         imagenes: [
             "img/tableroajedez.jpg",
             "img/tableroajedez1.jpg"
@@ -297,7 +300,7 @@ const productos = [
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Llavero personalizado con grabado láser y pintado a mano a todo color. Un acabado artesanal y muy llamativo, perfecto para dar vida a tu logotipo, diseño de asociación o evento. (El diseño de la imagen es un ejemplo de nuestro trabajo a medida).",
         material: "MDF",
-        tematica: "llaveros",
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveroimagencolor.jpg",
             "img/llaveropintado.jpg"
@@ -310,7 +313,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Cuadro decorativo de madera con grabado láser personalizado. Un diseño emotivo ideal para representar la unión de tu familia. Incluye marco a elegir en color negro o blanco. Tamaño: 40x30 cm. Para más o menos miembros familiares consultar diseño.",
         material: "MDF",
-        tematica: "decoración",
+        tematica: ["decoración"],
         imagen:  "img/cuadro.jpg"
     },
     {
@@ -347,7 +350,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Exhibidor de medallas de madera, ideal para que los campeones de la casa luzcan sus logros. Personalizable con el nombre y la silueta del deporte o afición que prefieras (fútbol, gimnasia, ciclismo...). Un regalo original para motivar y decorar. Tamaño aproximado: 40 cm de ancho.",
         material: "MDF",
-        tematica: "decoración",
+        tematica: ["decoración"],
         imagenes: [
             "img/medallero1.jpg",
             "img/medallero2.jpg"
