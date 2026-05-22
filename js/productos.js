@@ -403,7 +403,7 @@ const productos = [
         precioPack: "Ver opciones de precio en descripción",
         descripcion: "El recuerdo perfecto para celebrar el fin de curso, instituto o universidad. Incluye cinta para colgar (color sujeto a disponibilidad). Opciones: Genérica sin nombre (4,50€/ud) | Personalizada con nombre, promoción y logo (6,00€/ud) | Personalizada a doble cara con dedicatoria en el reverso (7,50€/ud).",
         material: "MDF",
-        tematica: ["eventos","profesores"],
+        tematica: ["eventos","profesores","graduación"],
         imagenes: [
             "img/medallagraduacion1.jpg",
             "img/medallasgraduacion.jpg"
@@ -416,7 +416,7 @@ const productos = [
         precioPack: "No disponible",
         descripcion: "Incluye mando a distancia para controlar los colores. Funciona mediante cable USB (incluido, sin cabezal) o con pilas (no incluidas). Base disponible en color negro o blanco según stock. ¿Quieres ir un paso más allá? Hacemos grabados 100% personalizados a partir de fotografías (consultar precio).",
         material: "Metracrilato y base LED (RGB)",
-        tematica: ["eventos", "decoración", "profesores"],
+        tematica: ["eventos", "decoración", "profesores", "graduación"],
         imagenes: [
             "img/lampara1.jpg",
             "img/lampara2.jpg",
