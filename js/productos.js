@@ -4,13 +4,16 @@
 const productos = [
     {
         id: 1,
-        titulo: "Llavero Pokémon",
+        titulo: "Llavero Anime Criatura Eléctrica",
         precioUnidad: 3.50,
-        precioPack: "29,75€ (Pack de 10 unid.) [-15%]",
-        descripcion: "Llavero con el logo y la figura de Pikachu. diametro 5 cm",
+        precioPack: "Apartir de 10 unidades -5%",
+        descripcion: "Llavero redondo con grabado inspirado en un popular personaje de anime y videojuegos. Diámetro de 5 cm.",
         material: "MDF lacado en blanco",
         tematica: ["llaveros", "friki"],
-        imagen: "img/llaveropokemon.jpg"
+        imagenes: [
+            "img/llaveroanime.jpg",
+            "img/llaveroanime1.jpg"
+        ]
     },
     {
         id: 2,
