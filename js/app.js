@@ -60,9 +60,10 @@ function mostrarProductos(listaProductos) {
         else if (prod.imagen) arrayFotos = [prod.imagen];
         else arrayFotos = ["https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Sin+Foto"];
 
-        let slidesHTML = arrayFotos.map(imgSrc => `
+        // AQUÍ ESTÁ EL CAMBIO PRINCIPAL PARA EL MODAL CARRUSEL
+        let slidesHTML = arrayFotos.map((imgSrc, index) => `
             <div class="carousel-slide">
-                <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy" onclick="abrirModal('${imgSrc}')" style="cursor: zoom-in;">
+                <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy" onclick="abrirModal(${prod.id}, ${index})" style="cursor: zoom-in;">
             </div>
         `).join('');
 
@@ -163,13 +164,55 @@ function aplicarFiltros() {
     mostrarProductos(productosFiltrados);
 }
 
-// === FUNCIONES DEL MODAL (IMAGEN GRANDE) ===
-function abrirModal(srcImagen) {
+// === FUNCIONES DEL MODAL CARRUSEL A PANTALLA COMPLETA ===
+let imagenesModalActuales = [];
+let indiceModalActual = 0;
+
+function abrirModal(productoId, indiceClicado) {
+    // 1. Encontrar qué producto ha tocado el cliente usando el ID
+    const prod = productos.find(p => p.id === productoId);
+    
+    // 2. Cargar todas sus fotos en la memoria del modal
+    if (Array.isArray(prod.imagenes)) imagenesModalActuales = prod.imagenes;
+    else if (Array.isArray(prod.imagen)) imagenesModalActuales = prod.imagen;
+    else if (prod.imagenes) imagenesModalActuales = [prod.imagenes];
+    else if (prod.imagen) imagenesModalActuales = [prod.imagen];
+    else imagenesModalActuales = ["https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Sin+Foto"];
+
+    // 3. Fijar en qué foto hizo clic y mostrarla
+    indiceModalActual = indiceClicado;
+    actualizarImagenModal();
+
+    // 4. Hacer visible la ventana gigante
     const modal = document.getElementById('image-modal');
-    const imagenModal = document.getElementById('modal-img');
-    imagenModal.src = srcImagen;
     modal.classList.remove('modal-oculto');
     modal.classList.add('modal-visible');
+}
+
+function actualizarImagenModal() {
+    const imagenModal = document.getElementById('modal-img');
+    imagenModal.src = imagenesModalActuales[indiceModalActual];
+    
+    // Si el producto solo tiene 1 foto, ocultamos las flechas para que no confundan
+    const mostrarFlechas = imagenesModalActuales.length > 1 ? 'flex' : 'none';
+    document.getElementById('modal-prev').style.display = mostrarFlechas;
+    document.getElementById('modal-next').style.display = mostrarFlechas;
+}
+
+function cambiarImagenModal(direccion, event) {
+    // Evitar que el clic en la flecha cierre el fondo
+    event.stopPropagation(); 
+    
+    indiceModalActual += direccion;
+    
+    // Hacer que el carrusel sea infinito (vuelve al inicio o al final)
+    if (indiceModalActual >= imagenesModalActuales.length) {
+        indiceModalActual = 0;
+    } else if (indiceModalActual < 0) {
+        indiceModalActual = imagenesModalActuales.length - 1;
+    }
+    
+    actualizarImagenModal();
 }
 
 function cerrarModal() {
