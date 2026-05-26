@@ -159,6 +159,9 @@ function aplicarFiltros() {
         });
     }
 
+    // === ORDEN: SIEMPRE LOS MÁS NUEVOS PRIMERO ===
+    productosFiltrados.sort((a, b) => b.id - a.id);
+
     mostrarProductos(productosFiltrados);
 }
 
