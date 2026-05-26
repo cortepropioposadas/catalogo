@@ -446,5 +446,17 @@ const productos = [
         imagenes: [
             "img/llaveroimagen.jpg"
         ]
+    },
+    {
+        id: 35,
+        titulo: "Figura manzana / trofeo para profesores",
+        precioUnidad: 20,
+        precioPack: " ",
+        descripcion: "Figura de mesa en forma de manzana con efecto 3D en relieve y detalles a color. El regalo perfecto para agradecer a los profes su gran dedicación. 100% personalizable: incluye el nombre del profesor/a en la pieza del puzzle, el curso escolar en la hoja y colores a elegir (sujetos a disponibilidad). Tamaño aproximado: [consultar] cm.",
+        material: "MDF",
+        tematica: ["eventos", "profesores"],
+        imagenes: [
+            "img/regalosenyo.jpg.jpg"
+        ]
     }
 ];
