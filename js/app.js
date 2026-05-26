@@ -43,7 +43,8 @@ function mostrarProductos(listaProductos) {
     }
 
     listaProductos.forEach(prod => {
-        const mensajeDM = encodeURIComponent(`¡Hola! Me interesa el producto: ${prod.titulo}. ¿Podéis darme más info?`);
+        // Generamos la variable con el texto limpio para el botón nuevo
+        const tituloSeguro = prod.titulo.replace(/'/g, "\\'");
         
         let tematicaTexto = "";
         if (Array.isArray(prod.tematica)) {
@@ -52,7 +53,6 @@ function mostrarProductos(listaProductos) {
             tematicaTexto = prod.tematica.toUpperCase();
         }
 
-        // --- MAGIA CARRUSEL (A prueba de errores) ---
         let arrayFotos = [];
         if (Array.isArray(prod.imagenes)) arrayFotos = prod.imagenes;
         else if (Array.isArray(prod.imagen)) arrayFotos = prod.imagen;
@@ -60,7 +60,6 @@ function mostrarProductos(listaProductos) {
         else if (prod.imagen) arrayFotos = [prod.imagen];
         else arrayFotos = ["https://via.placeholder.com/400x400/d9d9d9/1a1a1a?text=Sin+Foto"];
 
-        // AQUÍ ESTÁ EL CAMBIO PRINCIPAL PARA EL MODAL CARRUSEL
         let slidesHTML = arrayFotos.map((imgSrc, index) => `
             <div class="carousel-slide">
                 <img src="${imgSrc}" alt="${prod.titulo}" loading="lazy" onclick="abrirModal(${prod.id}, ${index})" style="cursor: zoom-in;">
@@ -83,7 +82,6 @@ function mostrarProductos(listaProductos) {
                 ${botonesHTML}
             </div>
         `;
-        // --- FIN MAGIA CARRUSEL ---
 
         // Protegemos el precio por si pones texto o un 0
         let precioMostrado = "";
@@ -112,9 +110,9 @@ function mostrarProductos(listaProductos) {
                         </div>
                     </div>
                     
-                    <a href="https://ig.me/m/cortepropio?text=${mensajeDM}" target="_blank" class="btn-dm">
+                    <button onclick="irAInstagram(this, '${tituloSeguro}')" class="btn-dm" style="border:none; cursor:pointer;">
                         Consultar por DM
-                    </a>
+                    </button>
                 </div>
             </div>
         `;
@@ -219,6 +217,33 @@ function cerrarModal() {
     const modal = document.getElementById('image-modal');
     modal.classList.remove('modal-visible');
     modal.classList.add('modal-oculto');
+}
+
+// === FUNCIÓN PARA COPIAR TEXTO Y ABRIR INSTAGRAM ===
+function irAInstagram(boton, nombreProducto) {
+    const mensaje = `¡Hola! Me interesa el producto: ${nombreProducto}. ¿Podéis darme más info?`;
+    const textoOriginal = boton.innerText;
+
+    // 1. Intentamos copiar el mensaje al portapapeles del móvil
+    navigator.clipboard.writeText(mensaje).then(() => {
+        // 2. Le avisamos visualmente al cliente
+        boton.innerText = "¡Mensaje copiado! Abriendo...";
+        boton.style.backgroundColor = "var(--c-mostaza)";
+        boton.style.color = "var(--c-texto)";
+        
+        // 3. Tras 1.5 segundos, abrimos Instagram
+        setTimeout(() => {
+            window.open('https://ig.me/m/cortepropio', '_blank');
+            // Devolvemos el botón a la normalidad por si vuelven atrás
+            boton.innerText = textoOriginal;
+            boton.style.backgroundColor = "var(--c-azul)";
+            boton.style.color = "white";
+        }, 1500);
+        
+    }).catch(err => {
+        // Si el móvil es muy antiguo y falla al copiar, abrimos Instagram igualmente
+        window.open('https://ig.me/m/cortepropio', '_blank');
+    });
 }
 
 window.onload = () => {
