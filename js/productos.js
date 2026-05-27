@@ -458,5 +458,61 @@ const productos = [
         imagenes: [
             "img/regalosenyo.jpg"
         ]
+    },
+    {
+        id: 36,
+        titulo: "Portafotos de graduación premium",
+        precioUnidad: 0.00,
+        precioPack: "Consultar descuentos por cantidad para clases.",
+        descripcion: "Marco portafotos de madera con base de mesa, el recuerdo ideal para celebrar el fin de etapa escolar. Fabricación artesanal con bordes y esquinas lijados a mano para un acabado extra suave. Cuenta con ranura superior para introducir la fotografía fácilmente. Opciones: Genérica sin nombre (10,00€/ud) | Grabado frontal personalizado (12,00€/ud) | Grabado a doble cara con dedicatoria en el reverso (14,00€/ud).",
+        material: "MDF",
+        tematica: ["eventos", "profesores"],
+        imagenes: [
+            "img/portafotograduacion.jpg",
+            "img/portafotograduacion1.jpg",
+            "img/portafotograduacion2.jpg",
+            "img/portafotograduacion3.jpg",
+        ]
+    },
+    {
+        id: 37,
+        titulo: "---",
+        precioUnidad: 0.00,
+        precioPack: " ",
+        descripcion: "---",
+        material: "MDF",
+        tematica: ["Semana santa"],
+        imagenes: [
+            "img/cuadrocristo.jpg",
+            "img/cuadronazareno.jpg",
+            "img/cuadrovirgen.jpg"
+        ]
+    },
+    {
+        id: 38,
+        titulo: "---",
+        precioUnidad: 0.00,
+        precioPack: " ",
+        descripcion: "---",
+        material: "MDF",
+        tematica: ["Semana santa"],
+        imagenes: [
+            "img/cuadrovirgengrande.jpg",
+            "img/cuadrovirgengrande1.jpg"
+        ]
+    },
+    {
+        id: 39,
+        titulo: "---",
+        precioUnidad: 0.00,
+        precioPack: " ",
+        descripcion: "---",
+        material: "MDF",
+        tematica: ["Semana santa"],
+        imagenes: [
+            "img/cuadrollaverovirgen.jpg",
+            "img/cuadrollaveronazareno.jpg",
+            "img/cuadrollaverocristo.jpg"
+        ]
     }
 ];
