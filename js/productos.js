@@ -468,10 +468,10 @@ const productos = [
         material: "MDF",
         tematica: ["eventos", "profesores", "decoracion"],
         imagenes: [
-            "img/portafotograduacion.jpg",
-            "img/portafotograduacion1.jpg",
-            "img/portafotograduacion2.jpg",
-            "img/portafotograduacion3.jpg",
+            "img/portafotograduacion.jpeg",
+            "img/portafotograduacion1.jpeg",
+            "img/portafotograduacion2.jpeg",
+            "img/portafotograduacion3.jpeg",
         ]
     },
     {
@@ -483,9 +483,9 @@ const productos = [
         material: "MDF",
         tematica: ["Semana santa", "decoracion"],
         imagenes: [
-            "img/cuadrocristo.jpg",
-            "img/cuadronazareno.jpg",
-            "img/cuadrovirgen.jpg"
+            "img/cuadrocristo.jpeg",
+            "img/cuadronazareno.jpeg",
+            "img/cuadrovirgen.jpeg"
         ]
     },
     {
@@ -497,8 +497,8 @@ const productos = [
         material: "MDF",
         tematica: ["Semana santa", "decoracion"],
         imagenes: [
-            "img/cuadrovirgengrande.jpg",
-            "img/cuadrovirgengrande1.jpg"
+            "img/cuadrovirgengrande.jpeg",
+            "img/cuadrovirgengrande1.jpeg"
         ]
     },
     {
@@ -510,9 +510,9 @@ const productos = [
         material: "MDF",
         tematica: ["Semana santa", "llavero"],
         imagenes: [
-            "img/cuadrollaverovirgen.jpg",
-            "img/cuadrollaveronazareno.jpg",
-            "img/cuadrollaverocristo.jpg"
+            "img/cuadrollaverovirgen.jpeg",
+            "img/cuadrollaveronazareno.jpeg",
+            "img/cuadrollaverocristo.jpeg"
         ]
     }
 ];
