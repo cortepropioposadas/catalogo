@@ -464,9 +464,9 @@ const productos = [
         titulo: "Portafotos de graduación premium",
         precioUnidad: 0.00,
         precioPack: "Consultar descuentos por cantidad para clases.",
-        descripcion: "Marco portafotos de madera con base de mesa, el recuerdo ideal para celebrar el fin de etapa escolar. Fabricación artesanal con bordes y esquinas lijados a mano para un acabado extra suave. Cuenta con ranura superior para introducir la fotografía fácilmente. Opciones: Genérica sin nombre (10,00€/ud) | Grabado frontal personalizado (12,00€/ud) | Grabado a doble cara con dedicatoria en el reverso (14,00€/ud).",
+        descripcion: "Marco portafotos con base de mesa, el recuerdo ideal para celebrar el fin de etapa escolar. Fabricación artesanal con bordes y esquinas lijados a mano para un acabado extra suave. Cuenta con ranura superior para introducir la fotografía fácilmente. La foto tiene un tamaño de 6,5cm de alto y 5cm ancho. Opciones: Genérica sin nombre (10,00€/ud) | Grabado frontal personalizado (12,00€/ud) | Grabado a doble cara con dedicatoria en el reverso (14,00€/ud).",
         material: "MDF",
-        tematica: ["eventos", "profesores"],
+        tematica: ["eventos", "profesores", "decoracion"],
         imagenes: [
             "img/portafotograduacion.jpg",
             "img/portafotograduacion1.jpg",
@@ -476,12 +476,12 @@ const productos = [
     },
     {
         id: 37,
-        titulo: "---",
-        precioUnidad: 0.00,
-        precioPack: " ",
-        descripcion: "---",
+        titulo: "Cuadro grabado colección cofrade",
+        precioUnidad: 15.00,
+        precioPack: "Consultar precio para réplicas en otro tamaño.",
+        descripcion: "Placa de madera con grabado láser de alta definición de estilo cofrade. Ideal para regalar o decorar. Disponemos de varios diseños (Cristo, Virgen, Nazareno...) y podemos personalizarlo con la imagen del titular de tu hermandad bajo pedido (preguntar posible suplemento). Se puede colgar o apoyar. Tamaño aproximado: 17cm de alto y 12cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa"],
+        tematica: ["Semana santa", "decoracion"],
         imagenes: [
             "img/cuadrocristo.jpg",
             "img/cuadronazareno.jpg",
@@ -490,12 +490,12 @@ const productos = [
     },
     {
         id: 38,
-        titulo: "---",
-        precioUnidad: 0.00,
-        precioPack: " ",
-        descripcion: "---",
+        titulo: "Cuadro grabado cofrade gran formato",
+        precioUnidad: 25.00,
+        precioPack: "Consultar precio para réplicas en otro tamaño.",
+        descripcion: "Ideal para presidir una habitación, un altar o como regalo de gran valor para cofrades. Su gran tamaño permite apreciar cada sombra y detalle de la imagen. Personalizable con el titular de tu hermandad bajo pedido (preguntar posible suplemento de diseño). Tamaño: 27,5 cm de alto y 19,5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa"],
+        tematica: ["Semana santa", "decoracion"],
         imagenes: [
             "img/cuadrovirgengrande.jpg",
             "img/cuadrovirgengrande1.jpg"
@@ -504,11 +504,11 @@ const productos = [
     {
         id: 39,
         titulo: "---",
-        precioUnidad: 0.00,
-        precioPack: " ",
-        descripcion: "---",
+        precioUnidad: 4.50,
+        precioPack: " +10 unidades -5%",
+        descripcion: "Incorpora un orificio superior, ideal para usar como llavero o colgante para el coche. Diseños disponibles: Cristo, Virgen y Nazareno. Tamaño: 6,5 cm de alto y 5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa"],
+        tematica: ["Semana santa", "llavero"],
         imagenes: [
             "img/cuadrollaverovirgen.jpg",
             "img/cuadrollaveronazareno.jpg",
