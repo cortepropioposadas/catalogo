@@ -456,7 +456,7 @@ const productos = [
         material: "MDF",
         tematica: ["eventos", "profesores"],
         imagenes: [
-            "img/regalosenyo.jpg.jpg"
+            "img/regalosenyo.jpg"
         ]
     }
 ];
