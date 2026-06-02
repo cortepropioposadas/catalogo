@@ -458,16 +458,19 @@ button.footer-btn:hover {
         display: none;
     }
 
-    /* Obligamos al título a quedarse en su propia línea arriba */
+/* Obligamos al título a quedarse en su propia línea y anclado */
     .filter-group h3 {
         display: block;      
+        position: sticky;    
+        left: 0;             
+        width: max-content;  
         white-space: normal; 
         font-size: 0.95rem;
         margin-bottom: 10px;
         border: none; 
+        z-index: 2;          
     }
 
-    /* ¡AQUÍ ESTABA EL ERROR! Cambiado a inline-block para que fluyan en horizontal */
     .filter-option {
         display: inline-block; 
         margin: 0 8px 0 0; 
