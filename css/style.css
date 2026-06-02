@@ -416,8 +416,9 @@ button.footer-btn:hover {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
+
 /* ========================================= */
-/* === ADAPTACIÓN MÓVIL (SÚPER BLINDADA) === */
+/* === ADAPTACIÓN MÓVIL (TÍTULOS FIJOS) === */
 /* ========================================= */
 
 @media (max-width: 768px) {
@@ -445,12 +446,13 @@ button.footer-btn:hover {
         box-shadow: none; 
     }
 
-    /* === MAGIA DEL SCROLL HORIZONTAL ARREGLADA === */
+    /* 1. EL CONTENEDOR DESLIZANTE */
     .filter-group {
-        margin-bottom: 15px;
-        white-space: nowrap; /* Evita que los botones caigan abajo */
-        overflow-x: auto;    /* Activa el scroll horizontal */
+        display: block; /* Mantiene la estructura original */
+        white-space: nowrap; /* Obliga a que las píldoras estén en una línea */
+        overflow-x: auto; 
         padding-bottom: 10px;
+        margin-bottom: 15px;
         scrollbar-width: none;
     }
 
@@ -458,113 +460,53 @@ button.footer-btn:hover {
         display: none;
     }
 
-/* Obligamos al título a quedarse en su propia línea y anclado */
+    /* 2. EL TÍTULO ANCLADO (LA MAGIA) */
     .filter-group h3 {
-        display: block;      
-        position: sticky;    
-        left: 0;             
-        width: max-content;  
-        white-space: normal; 
-        font-size: 0.95rem;
+        display: block !important; /* Fuerza que se ponga encima de las píldoras */
+        position: -webkit-sticky; /* Para iPhone/Safari antiguo */
+        position: sticky; /* Lo clava en la pantalla */
+        left: 0; /* Lo ancla al borde izquierdo */
+        width: max-content; /* Solo ocupa lo que mida el texto */
+        background-color: var(--c-fondo); /* Fondo sólido para tapar los botones al hacer scroll */
+        z-index: 10; /* Lo pone por encima de las píldoras */
+        padding: 5px 15px 5px 0; /* Margen fantasma para que los botones desaparezcan suavemente */
         margin-bottom: 10px;
         border: none; 
-        z-index: 2;          
     }
 
+    /* 3. LAS PÍLDORAS */
     .filter-option {
-        display: inline-block; 
-        margin: 0 8px 0 0; 
-        white-space: nowrap;
+        display: inline-block !important; /* Fluyen en horizontal perfectas */
+        margin-bottom: 0 !important;
+        margin-right: 8px !important;
+        white-space: nowrap !important;
     }
 
-    /* Cuadrícula de productos móvil */
+    /* === RESTO DE MÓVIL EXACTAMENTE IGUAL === */
     .productos-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         gap: 10px; 
     }
 
-    .card-body {
-        padding: 0.6rem;
-    }
-
-    .etiqueta-tematica {
-        font-size: 0.6rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .card-title {
-        font-size: 0.85rem; 
-        margin-bottom: 0.3rem;
-        line-height: 1.2;
-    }
-
-    .card-desc {
-        display: block; 
-        font-size: 0.75rem;
-        margin-bottom: 0.6rem;
-        line-height: 1.3;
-    }
-
-    .card-detalles {
-        font-size: 0.7rem;
-        padding: 4px 6px;
-        margin-bottom: 0.5rem;
-    }
-
-    .precio-box {
-        padding-top: 0.5rem;
-    }
-
-    .precio-unidad {
-        font-size: 0.95rem; 
-    }
-
-    .precio-pack {
-        font-size: 0.65rem;
-    }
-
-    .btn-dm {
-        font-size: 0.75rem;
-        padding: 0.6rem;
-        margin-top: 0.5rem;
-    }
-
-    .carousel-btn {
-        width: 24px;
-        height: 24px;
-        font-size: 0.7rem;
-    }
+    .card-body { padding: 0.6rem; }
+    .etiqueta-tematica { font-size: 0.6rem; margin-bottom: 0.3rem; }
+    .card-title { font-size: 0.85rem; margin-bottom: 0.3rem; line-height: 1.2; }
+    .card-desc { display: block; font-size: 0.75rem; margin-bottom: 0.6rem; line-height: 1.3; }
+    .card-detalles { font-size: 0.7rem; padding: 4px 6px; margin-bottom: 0.5rem; }
+    .precio-box { padding-top: 0.5rem; }
+    .precio-unidad { font-size: 0.95rem; }
+    .precio-pack { font-size: 0.65rem; }
+    .btn-dm { font-size: 0.75rem; padding: 0.6rem; margin-top: 0.5rem; }
     
-    .modal-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
+    .carousel-btn { width: 24px; height: 24px; font-size: 0.7rem; }
+    .modal-btn { width: 40px; height: 40px; font-size: 20px; }
     .modal-btn.prev { left: 2%; }
     .modal-btn.next { right: 2%; }
     
-    /* Footer móvil */
-    .footer-custom {
-        margin-top: 2rem; 
-    }
-    
-    .footer-content {
-        padding: 2.5rem 1rem; 
-    }
-
-    .footer-content h4 {
-        font-size: 1.25rem; 
-    }
-
-    .footer-content p {
-        font-size: 0.95rem; 
-        margin-bottom: 1.5rem;
-    }
-
-    button.footer-btn {
-        width: 100% !important; 
-        font-size: 0.95rem;
-        padding: 1rem;
-    }
+    .footer-custom { margin-top: 2rem; }
+    .footer-content { padding: 2.5rem 1rem; }
+    .footer-content h4 { font-size: 1.25rem; }
+    .footer-content p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+    button.footer-btn { width: 100% !important; font-size: 0.95rem; padding: 1rem; }
 }
