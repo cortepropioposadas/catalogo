@@ -416,7 +416,6 @@ button.footer-btn:hover {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
-
 /* ========================================= */
 /* === ADAPTACIÓN MÓVIL (SÚPER BLINDADA) === */
 /* ========================================= */
@@ -446,11 +445,11 @@ button.footer-btn:hover {
         box-shadow: none; 
     }
 
-    /* === MAGIA DEL SCROLL HORIZONTAL (Funciona para todos) === */
+    /* === MAGIA DEL SCROLL HORIZONTAL ARREGLADA === */
     .filter-group {
         margin-bottom: 15px;
-        white-space: nowrap; /* Evita que los botones salten hacia abajo */
-        overflow-x: auto;    /* Activa el deslizamiento con el dedo */
+        white-space: nowrap; /* Evita que los botones caigan abajo */
+        overflow-x: auto;    /* Activa el scroll horizontal */
         padding-bottom: 10px;
         scrollbar-width: none;
     }
@@ -459,21 +458,23 @@ button.footer-btn:hover {
         display: none;
     }
 
-    /* Título del filtro clavado arriba */
+    /* Obligamos al título a quedarse en su propia línea arriba */
     .filter-group h3 {
-        display: block;      /* Lo fuerza a ser un bloque entero */
-        white-space: normal; /* Permite que el texto respire si es largo */
+        display: block;      
+        white-space: normal; 
         font-size: 0.95rem;
         margin-bottom: 10px;
         border: none; 
     }
 
-    /* Píldoras del móvil */
+    /* ¡AQUÍ ESTABA EL ERROR! Cambiado a inline-block para que fluyan en horizontal */
     .filter-option {
         display: inline-block; 
-        margin: 0 8px 0 0; /* Espacio solo a la derecha para que no se peguen */
+        margin: 0 8px 0 0; 
+        white-space: nowrap;
     }
 
+    /* Cuadrícula de productos móvil */
     .productos-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
@@ -540,6 +541,7 @@ button.footer-btn:hover {
     .modal-btn.prev { left: 2%; }
     .modal-btn.next { right: 2%; }
     
+    /* Footer móvil */
     .footer-custom {
         margin-top: 2rem; 
     }
