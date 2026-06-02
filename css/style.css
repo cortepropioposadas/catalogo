@@ -92,6 +92,29 @@ header {
     accent-color: var(--c-azul);
 }
 
+/* === NOTA ARTESANAL (SIDEBAR) === */
+.nota-artesanal {
+    margin-top: 2.5rem;
+    padding: 1.2rem;
+    background-color: #fffaf0; /* El tono suave del mostaza que ya usas en los detalles */
+    border-left: 4px solid var(--c-mostaza);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.nota-artesanal h4 {
+    color: var(--c-azul);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.nota-artesanal strong {
+    color: var(--c-texto);
+}
+
+
 /* CUADRÍCULA DE PRODUCTOS */
 .productos-grid {
     display: grid;
