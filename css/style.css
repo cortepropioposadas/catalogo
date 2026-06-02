@@ -25,7 +25,6 @@ header {
     background-color: white;
     padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--c-gris);
-    /* COLORINCHI: Borde superior azul para darle fuerza a la marca */
     border-top: 4px solid var(--c-azul); 
     display: flex;
     align-items: center;
@@ -44,7 +43,7 @@ header {
 
 .logo span { color: var(--c-azul); }
 
-/* CONTENEDOR PRINCIPAL (Layout a 2 columnas) */
+/* CONTENEDOR PRINCIPAL */
 .layout-grid {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -60,7 +59,6 @@ header {
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid var(--c-gris);
-    /* COLORINCHI: Sombra sutil para despegarlo del fondo */
     box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
     height: fit-content;
     position: sticky;
@@ -71,7 +69,6 @@ header {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    /* COLORINCHI: Subrayado con el mostaza en lugar de gris */
     border-bottom: 2px solid var(--c-mostaza); 
     color: var(--c-azul);
 }
@@ -80,23 +77,35 @@ header {
     margin-bottom: 2rem;
 }
 
+/* Píldoras de filtro */
 .filter-option {
-    display: block;
-    margin-bottom: 0.8rem;
+    display: inline-block; 
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--c-gris);
+    background: white;
+    font-size: 0.85rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
-    font-size: 0.95rem;
+    transition: all 0.2s;
 }
 
 .filter-option input {
-    margin-right: 8px;
-    accent-color: var(--c-azul);
+    display: none; 
 }
 
-/* === NOTA ARTESANAL (SIDEBAR) === */
+.filter-option.activa {
+    background-color: var(--c-azul) !important;
+    color: white !important;
+    border-color: var(--c-azul) !important;
+}
+
+/* === NOTA ARTESANAL === */
 .nota-artesanal {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding: 1.2rem;
-    background-color: #fffaf0; /* El tono suave del mostaza que ya usas en los detalles */
+    background-color: #fffaf0;
     border-left: 4px solid var(--c-mostaza);
     border-radius: 6px;
     font-size: 0.85rem;
@@ -113,7 +122,6 @@ header {
 .nota-artesanal strong {
     color: var(--c-texto);
 }
-
 
 /* CUADRÍCULA DE PRODUCTOS */
 .productos-grid {
@@ -135,7 +143,6 @@ header {
 
 .card:hover {
     transform: translateY(-5px);
-    /* COLORINCHI: Sombra con tono azulado y borde mostaza al pasar el ratón */
     box-shadow: 0 10px 20px rgba(67, 90, 194, 0.15); 
     border-color: var(--c-mostaza);
 }
@@ -178,7 +185,6 @@ header {
 
 .card-detalles {
     font-size: 0.8rem;
-    /* COLORINCHI: Fondo con un toque ultra claro del mostaza y una línea lateral */
     background-color: #fffaf0; 
     border-left: 3px solid var(--c-mostaza);
     padding: 0.6rem;
@@ -219,13 +225,15 @@ header {
     font-weight: 600;
     margin-top: 1rem;
     transition: background 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-dm:hover {
     background-color: var(--c-rojo);
 }
 
-/* === CARRUSEL DE IMÁGENES (Añadir al final del CSS) === */
+/* === CARRUSEL DE IMÁGENES === */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -240,12 +248,12 @@ header {
     height: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Oculta la barra en Firefox */
+    scrollbar-width: none; 
     scroll-behavior: smooth;
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Oculta la barra en Chrome/Safari */
+    display: none; 
 }
 
 .carousel-slide {
@@ -261,7 +269,6 @@ header {
     object-fit: cover;
 }
 
-/* Flechas del carrusel */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -276,7 +283,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* COLORINCHI: Flechas azules */
     color: var(--c-azul);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background 0.2s, color 0.2s;
@@ -290,31 +296,6 @@ header {
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
-
-/* Ocultar el circulito del radio button */
-.filter-option input {
-    display: none; 
-}
-
-.filter-option {
-    display: inline-block; /* Para que parezcan botones */
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid var(--c-gris);
-    background: white;
-    font-size: 0.85rem;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.filter-option.activa {
-    background-color: var(--c-azul) !important;
-    color: white !important;
-    border-color: var(--c-azul) !important;
-}
-
 /* === MODAL DE IMAGEN (LIGHTBOX) === */
 .modal-oculto {
     display: none !important;
@@ -323,12 +304,12 @@ header {
 .modal-visible {
     display: flex !important;
     position: fixed;
-    z-index: 9999; /* Para que quede por encima de todo el catálogo */
+    z-index: 9999; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.85); 
     align-items: center;
     justify-content: center;
     cursor: zoom-out;
@@ -356,7 +337,6 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* COLORINCHI: Toque mostaza semitransparente en el modal */
     background: rgba(255, 189, 89, 0.2);
     color: white;
     border: none;
@@ -408,7 +388,6 @@ header {
     line-height: 1.6;
 }
 
-/* Obligamos al botón del footer a saltarse los estilos por defecto */
 button.footer-btn {
     display: inline-block;
     width: auto !important;
@@ -433,8 +412,8 @@ button.footer-btn:hover {
 .footer-bottom {
     background-color: var(--c-azul);
     color: white;
-    padding: 1rem;
-    font-size: 0.85rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
 
@@ -477,9 +456,11 @@ button.footer-btn:hover {
         border: none; 
     }
 
+    /* AQUÍ OBLIGAMOS A QUE AMBOS GRUPOS SEAN SCROLL HORIZONTAL */
     #contenedor-filtros-tematica,
-    .sidebar .filter-group:last-child {
+    #contenedor-filtros-precio {
         display: flex;
+        align-items: center;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 8px;
@@ -488,7 +469,7 @@ button.footer-btn:hover {
     }
 
     #contenedor-filtros-tematica::-webkit-scrollbar,
-    .sidebar .filter-group:last-child::-webkit-scrollbar {
+    #contenedor-filtros-precio::-webkit-scrollbar {
         display: none;
     }
 
@@ -565,8 +546,7 @@ button.footer-btn:hover {
     }
     .modal-btn.prev { left: 2%; }
     .modal-btn.next { right: 2%; }
-
-    /* === ADAPTACIÓN DEL FOOTER PARA MÓVIL === */
+    
     .footer-custom {
         margin-top: 2rem; 
     }
@@ -584,10 +564,9 @@ button.footer-btn:hover {
         margin-bottom: 1.5rem;
     }
 
-    .footer-btn {
+    button.footer-btn {
         width: 100% !important; 
         font-size: 0.95rem;
         padding: 1rem;
     }
-
 }
