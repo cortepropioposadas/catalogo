@@ -360,6 +360,63 @@ header {
 .modal-btn.prev { left: 5%; }
 .modal-btn.next { right: 5%; }
 
+/* === FOOTER ELEGANTE === */
+.footer-custom {
+    background-color: white;
+    border-top: 1px solid var(--c-gris);
+    margin-top: 4rem; 
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.footer-content h4 {
+    font-size: 1.5rem;
+    color: var(--c-azul);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.footer-content p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.footer-btn {
+    display: inline-block;
+    width: auto;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: var(--c-mostaza);
+    color: var(--c-texto);
+    border: none;
+    border-radius: 8px; /* Le ponemos bordes redondeados */
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 189, 89, 0.3);
+    transition: all 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: var(--c-azul);
+    color: white;
+    box-shadow: 0 4px 15px rgba(67, 90, 194, 0.3);
+}
+
+.footer-bottom {
+    background-color: var(--c-azul);
+    color: white;
+    padding: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
 /* ========================================= */
 /* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
 /* ========================================= */
@@ -494,5 +551,29 @@ header {
     }
     .modal-btn.prev { left: 2%; }
     .modal-btn.next { right: 2%; }
+
+    /* === ADAPTACIÓN DEL FOOTER PARA MÓVIL === */
+    .footer-custom {
+        margin-top: 2rem; /* Menos margen arriba para no dejar tanto hueco blanco */
+    }
     
+    .footer-content {
+        padding: 2.5rem 1rem; /* Reducimos el relleno para que no sea inmenso */
+    }
+
+    .footer-content h4 {
+        font-size: 1.25rem; /* Título un poco más pequeño */
+    }
+
+    .footer-content p {
+        font-size: 0.95rem; /* Texto más fácil de leer en móvil */
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-btn {
+        width: 100%; /* Hacemos que el botón ocupe todo el ancho para que sea fácil de tocar */
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
 }
