@@ -506,5 +506,17 @@ const productos = [
             "img/cuadrollaveronazareno.jpeg",
             "img/cuadrollaverocristo.jpeg"
         ]
+    },
+    {
+        id: 40,
+        titulo: "Llavero nombre inicial",
+        precioUnidad: 4.00,
+        precioPack: " +10 unidades -5%",
+        descripcion: "Llavero con la silueta de tu inicial y tu nombre completo grabado. Un detalle sencillo, original y muy práctico para identificar llaves o mochilas. Incluye anilla y cadenita metálica lista para colgar.",
+        material: "MDF",
+        tematica: ["llavero"],
+        imagenes: [
+            "img/llaveronombreinicial.jpg"
+        ]
     }
 ];
