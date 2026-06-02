@@ -321,7 +321,7 @@ const productos = [
         imagenes: [
             "img/abanico4.jpg",
             "img/abanico1.jpg",
-            "img/abanico2.jpg"
+            "img/abanico2recorte.jpg"
         ]
     },
     {
