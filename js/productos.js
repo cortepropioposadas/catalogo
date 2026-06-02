@@ -94,7 +94,6 @@ const productos = [
         material: "MDF",
         tematica: ["llaveros", "eventos"],
         imagenes: [
-            "img/llaverobautizo.jpg",
             "img/llaverobautizo2.jpg"
         ]
     },
@@ -110,8 +109,7 @@ const productos = [
             "img/nombre.jpg",
             "img/nombre1.jpg",
             "img/nombre2.jpg",
-            "img/nombre3.jpg",
-            "img/nombre4.jpg"
+            "img/nombre3.jpg"
         ]
     },
     {
@@ -124,7 +122,6 @@ const productos = [
         tematica: ["llaveros", "semana santa"],
         imagenes: [
             "img/llavaeroimagennombress1.jpg",
-            "img/llavaeroimagennombress2.jpg",
             "img/llaverohermandad.jpg"
         ]
     },
@@ -167,9 +164,8 @@ const productos = [
         material: "MDF",
         tematica: ["llaveros", "friki"],
         imagenes: [
-            "img/llaveronombreforma.jpg",
-            "img/llaveroimagen.jpg",
-            "img/llaverofutbolnombre.jpg"
+            "img/llaverofutbolnombre.jpg",
+            "img/llaveronombreforma.jpg"
         ]
     },
     {
@@ -272,8 +268,6 @@ const productos = [
          imagenes: [
             "img/boligrafobautizo.jpg",
             "img/boligrafobautizo1.jpg",
-            "img/boligrafobautizo2.jpg",
-            "img/boligrafocomunion.jpg",
             "img/boligrafocomunion1.jpg",
             "img/boligrafocomunion2.jpg",
             "img/boligrafocomunion3.jpg"
@@ -325,10 +319,9 @@ const productos = [
         material: "Madera y tela",
         tematica: ["abanicos", "eventos"],
         imagenes: [
-            "img/abanico2.jpg",
+            "img/abanico4.jpg",
             "img/abanico1.jpg",
-            "img/abanico3.jpg",
-            "img/abanico4.jpg"
+            "img/abanico2.jpg"
         ]
     },
     {
@@ -363,7 +356,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Un detalle elegante, clásico y muy nuestro para bodas, aniversarios o eventos especiales. Opciones: Solo texto (11€/ud) | Imagen sencilla + nombre (15€/ud).",
         material: "Cristal",
-        tematica: ["eventos","decoración"],
+        tematica: ["eventos","decoración", "Cristalería"],
         imagenes: [
             "img/catavinos.jpg"
         ]
@@ -419,13 +412,12 @@ const productos = [
         tematica: ["eventos", "decoración", "profesores", "graduación"],
         imagenes: [
             "img/lampara1.jpg",
-            "img/lampara2.jpg",
-            "img/lampara3.jpg"
+            "img/lampara2.jpg"
         ]
     },
     {
         id: 33,
-        titulo: "Cuadro Natalicio",
+        titulo: "Cuadro natalicio",
         precioUnidad: 22.00,
         precioPack: " ",
         descripcion: "Precioso marco de fotos de mesa personalizado con los datos de nacimiento del bebé (nombre, fecha, peso y altura). Un recuerdo único, emotivo y 100% modificable a tu gusto. Diseñado para colocar una fotografía estándar de 10x15 cm. Tamaño total aproximado: 25 cm de ancho.",
@@ -476,7 +468,7 @@ const productos = [
     },
     {
         id: 37,
-        titulo: "Cuadro grabado colección cofrade",
+        titulo: "Cuadro grabado cofrade",
         precioUnidad: 15.00,
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Placa de madera con grabado láser de alta definición de estilo cofrade. Ideal para regalar o decorar. Disponemos de varios diseños (Cristo, Virgen, Nazareno...) y podemos personalizarlo con la imagen del titular de tu hermandad bajo pedido (preguntar posible suplemento). Se puede colgar o apoyar. Tamaño aproximado: 17cm de alto y 12cm de ancho.",
@@ -503,7 +495,7 @@ const productos = [
     },
     {
         id: 39,
-        titulo: "---",
+        titulo: "Llavero cuadro cofrade",
         precioUnidad: 4.50,
         precioPack: " +10 unidades -5%",
         descripcion: "Incorpora un orificio superior, ideal para usar como llavero o colgante para el coche. Diseños disponibles: Cristo, Virgen y Nazareno. Tamaño: 6,5 cm de alto y 5 cm de ancho.",
