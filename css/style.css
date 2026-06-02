@@ -77,7 +77,7 @@ header {
     margin-bottom: 2rem;
 }
 
-/* Píldoras de filtro */
+/* Píldoras de filtro (Ordenador) */
 .filter-option {
     display: inline-block; 
     padding: 6px 14px;
@@ -418,7 +418,7 @@ button.footer-btn:hover {
 }
 
 /* ========================================= */
-/* === ADAPTACIÓN MÓVIL (2 COLUMNAS) === */
+/* === ADAPTACIÓN MÓVIL (SÚPER BLINDADA) === */
 /* ========================================= */
 
 @media (max-width: 768px) {
@@ -446,39 +446,32 @@ button.footer-btn:hover {
         box-shadow: none; 
     }
 
+    /* === MAGIA DEL SCROLL HORIZONTAL (Funciona para todos) === */
     .filter-group {
-        margin-bottom: 10px;
-    }
-
-    .filter-group h3 {
-        font-size: 0.9rem;
-        margin-bottom: 8px;
-        border: none; 
-    }
-
-    /* AQUÍ OBLIGAMOS A QUE AMBOS GRUPOS SEAN SCROLL HORIZONTAL */
-    #contenedor-filtros-tematica,
-    #contenedor-filtros-precio {
-        display: flex;
-        align-items: center;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 8px;
+        margin-bottom: 15px;
+        white-space: nowrap; /* Evita que los botones salten hacia abajo */
+        overflow-x: auto;    /* Activa el deslizamiento con el dedo */
         padding-bottom: 10px;
         scrollbar-width: none;
     }
 
-    #contenedor-filtros-tematica::-webkit-scrollbar,
-    #contenedor-filtros-precio::-webkit-scrollbar {
+    .filter-group::-webkit-scrollbar {
         display: none;
     }
 
+    /* Título del filtro clavado arriba */
+    .filter-group h3 {
+        display: block;      /* Lo fuerza a ser un bloque entero */
+        white-space: normal; /* Permite que el texto respire si es largo */
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+        border: none; 
+    }
+
+    /* Píldoras del móvil */
     .filter-option {
-        display: flex;
-        align-items: center;
-        white-space: nowrap; 
-        height: fit-content;
-        margin: 0;
+        display: inline-block; 
+        margin: 0 8px 0 0; /* Espacio solo a la derecha para que no se peguen */
     }
 
     .productos-grid {
