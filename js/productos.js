@@ -500,7 +500,7 @@ const productos = [
         precioPack: " +10 unidades -5%",
         descripcion: "Incorpora un orificio superior, ideal para usar como llavero o colgante para el coche. Diseños disponibles: Cristo, Virgen y Nazareno. Tamaño: 6,5 cm de alto y 5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "llavero"],
+        tematica: ["Semana santa", "llaveros"],
         imagenes: [
             "img/cuadrollaverovirgen.jpeg",
             "img/cuadrollaveronazareno.jpeg",
@@ -514,7 +514,7 @@ const productos = [
         precioPack: " +10 unidades -5%",
         descripcion: "Llavero con la silueta de tu inicial y tu nombre completo grabado. Un detalle sencillo, original y muy práctico para identificar llaves o mochilas. Incluye anilla y cadenita metálica lista para colgar.",
         material: "MDF",
-        tematica: ["llavero"],
+        tematica: ["llaveros"],
         imagenes: [
             "img/llaveronombreinicial.jpg"
         ]
