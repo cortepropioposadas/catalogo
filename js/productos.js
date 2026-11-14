@@ -526,7 +526,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño, o grosor.",
         descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón.",
         material: "MDF",
-        tematica: ["Navidad"],
+        tematica: ["navidad"],
         imagenes: [
             "img/elfo.jpeg", 
             "img/elfos.jpeg", 
@@ -540,7 +540,7 @@ const productos = [
         precioPack: "-",
         descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
         material: "MDF",
-        tematica: ["Navidad"],
+        tematica: ["navidad"],
         imagenes: [
             "img/marcapuerta.jpeg", 
             "img/llavePapanoel.jpeg"
@@ -553,7 +553,7 @@ const productos = [
         precioPack: "-",
         descripcion: "Bolas de madera personalizadas con tu foto favorita o diseño navideño (como Papá Noel).",
         material: "MDF",
-        tematica: ["Navidad"],
+        tematica: ["navidad"],
         imagenes: [
             "img/bolaFoto.jpeg", 
             "img/bolafoto2.jpeg"
@@ -566,7 +566,7 @@ const productos = [
         precioPack: "-",
         descripcion: "Bandeja de madera aprox. 30x20 cm para dejar las galletas, leche y zanahorias.",
         material: "MDF",
-        tematica: ["Navidad"],
+        tematica: ["navidad"],
         imagenes: [
             "img/bandejaPapaNoel.jpeg", 
             "img/bandejaReyes.jpeg"
@@ -579,7 +579,7 @@ const productos = [
         precioPack: "-",
         descripcion: "Llave de madera de aprox. 9 cm de largo grabada con el nombre (ej. Mario, Alba).",
         material: "MDF",
-        tematica: ["Navidad"],
+        tematica: ["navidad"],
         imagenes: [
             "img/llavesPersonalizadas.jpeg"
         ]
