@@ -518,5 +518,71 @@ const productos = [
         imagenes: [
             "img/llaveronombreinicial.jpg"
         ]
-    }
+    }, 
+    {
+        id: 41,
+        titulo: "Elfos decoración",
+        precioUnidad: 3.5,
+        precioPack: "Consultar precio para réplicas en otro tamaño, o grosor.",
+        descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón.",
+        material: "MDF",
+        tematica: ["Navidad"],
+        imagenes: [
+            "img/elfo.jpeg", 
+            "img/elfos.jpeg", 
+            "img/elfodoble.jpeg"
+        ]
+    }, 
+    {
+        id: 42,
+        titulo: "Colgador / Manivela Llave Santa",
+        precioUnidad: 9.00,
+        precioPack: "-",
+        descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
+        material: "MDF",
+        tematica: ["Navidad"],
+        imagenes: [
+            "img/marcapuerta.jpeg", 
+            "img/llavePapanoel.jpeg"
+        ]
+    }, 
+    {
+        id: 43,
+        titulo: "Bolas de Navidad con Imagen",
+        precioUnidad: 6.50,
+        precioPack: "-",
+        descripcion: "Bolas de madera personalizadas con tu foto favorita o diseño navideño (como Papá Noel).",
+        material: "MDF",
+        tematica: ["Navidad"],
+        imagenes: [
+            "img/bolaFoto.jpeg", 
+            "img/bolafoto2.jpeg"
+        ]
+    }, 
+    {
+        id: 44,
+        titulo: "Bandeja de Navidad (Papá Noel / Reyes Magos)",
+        precioUnidad: 15.00,
+        precioPack: "-",
+        descripcion: "Bandeja de madera aprox. 30x20 cm para dejar las galletas, leche y zanahorias.",
+        material: "MDF",
+        tematica: ["Navidad"],
+        imagenes: [
+            "img/bandejaPapaNoel.jpeg", 
+            "img/bandejaReyes.jpeg"
+        ]
+    }, 
+        {
+        id: 45,
+        titulo: "Llaves Mágicas Personalizadas",
+        precioUnidad: 4.00,
+        precioPack: "-",
+        descripcion: "Llave de madera de aprox. 9 cm de largo grabada con el nombre (ej. Mario, Alba).",
+        material: "MDF",
+        tematica: ["Navidad"],
+        imagenes: [
+            "img/llavesPersonalizadas.jpeg"
+        ]
+    } 
+    
 ];
