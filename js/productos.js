@@ -543,7 +543,7 @@ const productos = [
         tematica: ["navidad"],
         imagenes: [
             "img/marcapuerta.jpeg", 
-            "img/llavePapanoel.jpeg"
+            "img/llavePapaNoel.jpeg"
         ]
     }, 
     {
