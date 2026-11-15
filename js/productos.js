@@ -536,7 +536,7 @@ const productos = [
     {
         id: 42,
         titulo: "Colgador / Manivela Llave Santa",
-        precioUnidad: -,
+        precioUnidad: 10.00,
         precioPack: "Preguntar precio por modelo y personalización, entre 9-12€",
         descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
         material: "MDF",
