@@ -524,7 +524,7 @@ const productos = [
         titulo: "Elfos decoración",
         precioUnidad: 3.5,
         precioPack: "Consultar precio para réplicas en otro tamaño, o grosor.",
-        descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón. Sobre 11-12cm.",
+        descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón. El de la imagen mide unos 11 cm.",
         material: "MDF",
         tematica: ["navidad"],
         imagenes: [
