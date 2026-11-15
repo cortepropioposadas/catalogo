@@ -536,8 +536,8 @@ const productos = [
     {
         id: 42,
         titulo: "Colgador / Manivela Llave Santa",
-        precioUnidad: 9.50,
-        precioPack: "Preguntar precio por modelo y personalización, entre 9 y 12€",
+        precioUnidad: -,
+        precioPack: "Preguntar precio por modelo y personalización, entre 9-12€",
         descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
         material: "MDF",
         tematica: ["navidad"],
@@ -549,7 +549,7 @@ const productos = [
     {
         id: 43,
         titulo: "Bolas de Navidad con Imagen",
-        precioUnidad: 5.00,
+        precioUnidad: 5.50,
         precioPack: "-",
         descripcion: "Bolas de madera personalizadas con tu foto favorita o diseño navideño (como Papá Noel).",
         material: "MDF",
@@ -575,7 +575,7 @@ const productos = [
         {
         id: 45,
         titulo: "Llaves Mágicas Personalizadas",
-        precioUnidad: 3.75,
+        precioUnidad: 4.00,
         precioPack: "-",
         descripcion: "Llave de madera de aprox. 9 cm de largo grabada con el nombre (ej. Mario, Alba).",
         material: "MDF",
