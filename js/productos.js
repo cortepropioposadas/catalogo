@@ -291,7 +291,7 @@ const productos = [
         id: 23,
         titulo: "Llavero imagen pintado a mano",
         precioUnidad: 6.00,
-        precioPack: "+10 unidades -5% y +20 unidades -10%",
+        precioPack: "-",
         descripcion: "Llavero personalizado con grabado láser y pintado a mano a todo color. Un acabado artesanal y muy llamativo, perfecto para dar vida a tu logotipo, diseño de asociación o evento. (El diseño de la imagen es un ejemplo de nuestro trabajo a medida).",
         material: "MDF",
         tematica: ["llaveros"],
