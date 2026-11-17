@@ -522,7 +522,7 @@ const productos = [
     {
         id: 41,
         titulo: "Elfos decoración",
-        precioUnidad: 3.5,
+        precioUnidad: 4,
         precioPack: "Consultar precio para réplicas en otro tamaño, o grosor.",
         descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón. El de la imagen mide unos 11 cm.",
         material: "MDF",
@@ -548,10 +548,10 @@ const productos = [
     }, 
     {
         id: 43,
-        titulo: "Bolas de Navidad con Imagen",
+        titulo: "Bolas de Navidad con imagen",
         precioUnidad: 5.50,
         precioPack: "-",
-        descripcion: "Bolas de madera personalizadas con tu foto favorita o diseño navideño (como Papá Noel).",
+        descripcion: "Bolas de madera personalizadas para poner tu foto favorita el precio va desde los 5,50€-6,50€ dependiendo del diseño.",
         material: "MDF",
         tematica: ["navidad"],
         imagenes: [
