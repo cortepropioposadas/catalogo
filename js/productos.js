@@ -446,7 +446,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Figura de mesa en forma de manzana con efecto 3D en relieve y detalles a color. El regalo perfecto para agradecer a los profes su gran dedicación. 100% personalizable: incluye el nombre del profesor/a en la pieza del puzzle, el curso escolar en la hoja y colores a elegir (sujetos a disponibilidad). Tamaño aproximado: [consultar] cm.",
         material: "MDF",
-        tematica: ["eventos", "profesores"],
+        tematica: ["profesores"],
         imagenes: [
             "img/regalosenyo.jpg"
         ]
@@ -473,7 +473,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Placa de madera con grabado láser de alta definición de estilo cofrade. Ideal para regalar o decorar. Disponemos de varios diseños (Cristo, Virgen, Nazareno...) y podemos personalizarlo con la imagen del titular de tu hermandad bajo pedido (preguntar posible suplemento). Se puede colgar o apoyar. Tamaño aproximado: 17cm de alto y 12cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "decoración"],
+        tematica: ["Semana santa"],
         imagenes: [
             "img/cuadrocristo.jpeg",
             "img/cuadronazareno.jpeg",
@@ -487,7 +487,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Ideal para presidir una habitación, un altar o como regalo de gran valor para cofrades. Su gran tamaño permite apreciar cada sombra y detalle de la imagen. Personalizable con el titular de tu hermandad bajo pedido (preguntar posible suplemento de diseño). Tamaño: 27,5 cm de alto y 19,5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "decoración"],
+        tematica: ["Semana santa"],
         imagenes: [
             "img/cuadrovirgengrande.jpeg",
             "img/cuadrovirgengrande1.jpeg"
