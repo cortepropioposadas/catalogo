@@ -458,7 +458,7 @@ const productos = [
         precioPack: "Consultar descuentos por cantidad para clases.",
         descripcion: "Marco portafotos con base de mesa, el recuerdo ideal para celebrar el fin de etapa escolar. Fabricación artesanal con bordes y esquinas lijados a mano para un acabado extra suave. Cuenta con ranura superior para introducir la fotografía fácilmente. La foto tiene un tamaño de 6,5cm de alto y 5cm ancho. Opciones: Genérica sin nombre (10,00€/ud) | Grabado frontal personalizado (12,00€/ud) | Grabado a doble cara con dedicatoria en el reverso (14,00€/ud).",
         material: "MDF",
-        tematica: ["eventos", "profesores", "decoracion"],
+        tematica: ["eventos", "profesores", "decoración"],
         imagenes: [
             "img/portafotograduacion.jpeg",
             "img/portafotograduacion1.jpeg",
@@ -473,7 +473,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Placa de madera con grabado láser de alta definición de estilo cofrade. Ideal para regalar o decorar. Disponemos de varios diseños (Cristo, Virgen, Nazareno...) y podemos personalizarlo con la imagen del titular de tu hermandad bajo pedido (preguntar posible suplemento). Se puede colgar o apoyar. Tamaño aproximado: 17cm de alto y 12cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "decoracion"],
+        tematica: ["Semana santa", "decoración"],
         imagenes: [
             "img/cuadrocristo.jpeg",
             "img/cuadronazareno.jpeg",
@@ -487,7 +487,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Ideal para presidir una habitación, un altar o como regalo de gran valor para cofrades. Su gran tamaño permite apreciar cada sombra y detalle de la imagen. Personalizable con el titular de tu hermandad bajo pedido (preguntar posible suplemento de diseño). Tamaño: 27,5 cm de alto y 19,5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "decoracion"],
+        tematica: ["Semana santa", "decoración"],
         imagenes: [
             "img/cuadrovirgengrande.jpeg",
             "img/cuadrovirgengrande1.jpeg"
