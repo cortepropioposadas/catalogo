@@ -58,7 +58,7 @@ const productos = [
     {
         id: 5,
         titulo: "Imán recuerdo mi primera comunión",
-        precioUnidad: 4.0,
+        precioUnidad: 5.0,
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Imán de madera personalizado, ideal como detalle inolvidable para invitados. Incluye espacio tipo marco para la fotografía que elijas y grabado láser con el nombre y la fecha del evento. Altura: 9 cm.",
         material: "MDF",
