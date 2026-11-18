@@ -277,7 +277,7 @@ const productos = [
         id: 22,
         titulo: "Llaveros con retrato personalizado",
         precioUnidad: 0,
-        precioPack: "Desde 4,50€/unidad (dependiendo de los detalles de la imagen)",
+        precioPack: "Desde 5.00€/unidad (dependiendo de los detalles de la imagen)",
         descripcion: "Llavero de madera con retrato grabado a láser a partir de tu fotografía favorita. Un detalle sorprendente y único, ideal para regalar a los invitados de bautizos, comuniones o eventos especiales. Incluye la personalización con el nombre y la fecha.",
         material: "MDF lacado en blanco",
         tematica: ["llaveros", "eventos"],
@@ -596,6 +596,29 @@ const productos = [
             "img/llaveroEquipo.jpeg",
             "img/llaveroEquipo1.jpeg"
         ]
-    } 
-    
+    },
+    {
+        id: 47,
+        titulo: "Pizarra del Elfo",
+        precioUnidad: 16.00,
+        precioPack: " ",
+        descripcion: "Cartel de MDF con la divertida silueta de un gorro de elfo en la parte superior y el grabado 'Un mensaje de tu Elfo'. Cuenta con una superficie blanca central tipo pizarra o panel para escribir notas personalizadas de los elfos cada mañana. Tamaño: 24x20 cm.",
+        material: "MDF",
+        tematica: ["navidad"],
+        imagenes: [
+            "img/pizarraElfo.jpeg"
+        ]
+    },
+    {
+        id: 48,
+        titulo: "Postal mágica del Elfo",
+        precioUnidad: 10.50,
+        precioPack: " ",
+        descripcion: "Postal de MDF grabada a áser simulando un envio oficial desde el Polo Norte. El texto incluye un divertido mensaje del elfo espía avisando de que vigila si se portan bien. Tamaño: 21x14 cm. Posibles modificaciones a la imagen de base, con un posible suplemento.",
+        material: "MDF",
+        tematica: ["navidad"],
+        imagenes: [
+            "img/postalElfo.jpeg"
+        ]
+    }
 ];
