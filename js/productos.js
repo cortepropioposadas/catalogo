@@ -539,7 +539,7 @@ const productos = [
         precioUnidad: 10.00,
         precioPack: "Preguntar precio por modelo y personalización, entre 9-12€",
         descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
-        material: "MDF",
+        material: "MDF o MDF lacado en blanco",
         tematica: ["navidad"],
         imagenes: [
             "img/marcapuerta.jpeg", 
@@ -550,7 +550,7 @@ const productos = [
         id: 43,
         titulo: "Bolas de Navidad con imagen",
         precioUnidad: 5.50,
-        precioPack: "-",
+        precioPack: " ",
         descripcion: "Bolas de madera personalizadas para poner tu foto favorita el precio va desde los 5,50€-6,50€ dependiendo del diseño.",
         material: "MDF",
         tematica: ["navidad"],
@@ -563,9 +563,9 @@ const productos = [
         id: 44,
         titulo: "Bandeja de Navidad (Papá Noel / Reyes Magos)",
         precioUnidad: 15.00,
-        precioPack: "-",
+        precioPack: " ",
         descripcion: "Bandeja de madera aprox. 30x20 cm para dejar las galletas, leche y zanahorias.",
-        material: "MDF",
+        material: "MDF o MDF lacado en blanco",
         tematica: ["navidad"],
         imagenes: [
             "img/bandejaPapaNoel.jpeg", 
@@ -576,9 +576,9 @@ const productos = [
         id: 45,
         titulo: "Llaves Mágicas Personalizadas",
         precioUnidad: 4.00,
-        precioPack: "-",
+        precioPack: " ",
         descripcion: "Llave de madera de aprox. 9 cm de largo grabada con el nombre (ej. Mario, Alba).",
-        material: "MDF",
+        material: "MDF lacado en blanco",
         tematica: ["navidad"],
         imagenes: [
             "img/llavesPersonalizadas.jpeg"
