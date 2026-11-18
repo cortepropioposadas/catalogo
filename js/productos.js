@@ -572,7 +572,7 @@ const productos = [
             "img/bandejaReyes.jpeg"
         ]
     }, 
-        {
+    {
         id: 45,
         titulo: "Llaves Mágicas Personalizadas",
         precioUnidad: 4.00,
@@ -582,6 +582,19 @@ const productos = [
         tematica: ["navidad"],
         imagenes: [
             "img/llavesPersonalizadas.jpeg"
+        ]
+    },
+    {
+        id: 46,
+        titulo: "Llavero escudo de equipo personalizado",
+        precioUnidad: 0,
+        precioPack: "Desde 5,50€/unidad (dependiendo de los detalles de la imagen y los extras)",
+        descripcion: "Llavero con diseño en forma de escudo personalizado para equipos y clubes. La imagen frontal se diseña desde 0 a medida a partir de vuestra foto de equipo o idea. Posibilidad de añadir una dedicatoria o frase emotiva grabada en la parte trasera (con un pequeño suplemento). El regalo perfecto para fin de temporada, campeonatos o para toda la plantilla.",
+        material: "MDF lacado en blanco",
+        tematica: ["llaveros", "eventos","deportes"],
+        imagenes: [
+            "img/llaveroEquipo.jpeg",
+            "img/llaveroEquipo1.jpeg"
         ]
     } 
     
