@@ -145,14 +145,15 @@ const productos = [
         precioUnidad: 4.00,
         precioPack: "+10 unidades -5% y +20 unidades -10%",
         descripcion: "Llavero con el logotipo de tu empresa o negocio mediante grabado láser. Un artículo ideal como merchandising, fidelización de clientes o regalo corporativo. El diseño y el corte se adaptan a la forma de tu marca. Tamaño de referencia: entre 4,5 y 5 cm.",
-        material: "MDF",
-        tematica: ["llaveros"],
+        material: "MDF o MDF lacado en blanco",
+        tematica: ["llaveros", "empresas"],
         imagenes: [
             "img/llaveroempresa2.jpg",
             "img/llaveroempresa3.jpg",
             "img/llaveroempresa4.jpg",
             "img/llaveroempresa1.jpg",
             "img/llaveroempresa5.jpg",
+            "img/llaverosNombreEmpresa.jpeg"
         ]
     },
     {
@@ -202,7 +203,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Ideal para nombres compuestos, frases cortas, colegios o asociaciones. El tamaño aproximado es de 6 cm, ajustándose en función de la longitud del texto elegido.",
         material: "MDF lacado en blanco",
-        tematica: ["llaveros"],
+        tematica: ["llaveros", "empresas"],
         imagenes: [
             "img/llaveronombresimpleblanco.jpg",
             "img/llaveronombresimpleblanco1.jpg",
@@ -264,7 +265,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Un detalle práctico y elegante, perfecto para bodas, comuniones, graduaciones o regalos para profesores. Graba el nombre, la fecha o una frase corta para hacerlo único.",
         material: "BAMBÚ, color de tinta sujeto a disponibilidad (habitualmente negro)",
-        tematica: ["profesores", "eventos"],
+        tematica: ["profesores", "eventos", "empresas"],
          imagenes: [
             "img/boligrafobautizo.jpg",
             "img/boligrafobautizo1.jpg",
@@ -294,7 +295,7 @@ const productos = [
         precioPack: "-",
         descripcion: "Llavero personalizado con grabado láser y pintado a mano a todo color. Un acabado artesanal y muy llamativo, perfecto para dar vida a tu logotipo, diseño de asociación o evento. (El diseño de la imagen es un ejemplo de nuestro trabajo a medida).",
         material: "MDF",
-        tematica: ["llaveros"],
+        tematica: ["llaveros", "empresas"],
         imagenes: [
             "img/llaveroimagencolor.jpg",
             "img/llaveropintado.jpg"
@@ -656,14 +657,68 @@ const productos = [
     },
     {
         id: 51,
-        titulo: "Bola de navidad inicial, en relieve, y nombre (doble capa)",
+        titulo: "Bola de navidad inicial y nombre en relieve (doble capa)",
         precioUnidad: 5.50,
         precioPack: "Pack familia (4 unidades): 5.00€/ud",
         descripcion: "Adorno navideño de diseño exclusivo fabricado en doble capa para lograr un elegante efecto 3D en relieve. Combina una base de madera MDF con el aro exterior y la letra inicial superpuestos en MDF lacado en blanco, junto al nombre grabado a láser. Un detalle sofisticado y duradero para personalizar el árbol de toda la familia. Diámetro: 8 cm.",
         material: "MDF y MDF lacado en blanco (doble capa)",
         tematica: ["navidad"],
         imagenes: [
-            "img/bolaNombreInicial.jpeg""
+            "img/bolaNombreInicial.jpeg"
+        ]
+    },
+    {
+        id: 52,
+        titulo: "Bola navidad personalizada nombre con fondo",
+        precioUnidad: 4.50,
+        precioPack: "Consultar colores de fieltro disponibles y descuentos por cantidad",
+        descripcion: "Adorno navideño de madera calada con el nombre personalizado, detalle de copo de nieve y una trasera de fieltro rojo que aporta un contraste cálido y muy navideño. Incluye cordón listo para colgar en el árbol. Posibilidad de elegir otros colores de fieltro bajo disponibilidad. (Nota: La bolsita de yute de la imagen no está incluida; si es para regalo, puedes solicitar envoltorio especial bajo un pequeño suplemento). Diámetro: 9 cm.",
+        material: "MDF y fieltro",
+        tematica: ["navidad"],
+        imagenes: [
+            "img/bolaNombreFieltro.jpeg",
+            "img/bolaNombreFieltro1.jpeg"
+        ]
+    },
+    {
+        id: 53,
+        titulo: "Expositor / Tótem QR personalizado para negocios",
+        precioUnidad: 12.00,
+        precioPack: "Consultar descuentos por varias unidades para mesas o mostradores",
+        descripcion: "Expositor de mesa con diseño moderno en forma de arco y base encajable, ideal para mostradores, tiendas, peluquerías, clínicas o restaurantes. Grabado láser de alta precisión para que tus clientes escaneen al instante tu Instagram, Reseñas de Google, Carta Digital, WhatsApp o WiFi. Incluye el logotipo o nombre de tu negocio en la parte inferior. Tamaño aproximado: 20 cm de ancho x 25 cm de alto.",
+        material: "MDF",
+        tematica: ["empresas"],
+        imagenes: [
+            "img/soporteInstagram1.jpeg",
+            "img/soporteInstagram2.jpeg",
+            "img/soporteInstagram3.jpeg"
+        ]
+    },
+    {
+        id: 54,
+        titulo: "Bola / corona de navidad doble capa personalizada (gran formato)",
+        precioUnidad: 12.00,
+        precioPack: "Consultar precio para otros tamaños (20 cm, 25 cm, 30 cm...) o pedidos por cantidad",
+        descripcion: "Adorno navideño de gran formato fabricado en doble capa con efecto relieve 3D. Combina una base de madera MDF grabada con el logotipo de tu negocio, apellido familiar o texto que elijas, y un espectacular marco calado en MDF negro con motivos navideños de copos de nieve y acebo. Ideal para decorar escaparates, puertas de comercios, mostradores o presidir el árbol de Navidad. Tamaño estándar: 17 cm de diámetro (modificable bajo demanda).",
+        material: "MDF y MDF negro (doble capa)",
+        tematica: ["empresas","navidad", "decoración"],
+        imagenes: [
+            "img/bolaDobleCapaEmpresa1.jpeg",
+            "img/bolaDobleCapaEmpresa.jpeg"
+        ]
+    },
+    {
+        id: 55,
+        titulo: "Corazón grabado con ilustración y bolígrafo para testigos o eventos",
+        precioUnidad: 28.00,
+        precioPack: " ",
+        descripcion: "Regalo conmemorativo 100% personalizado, ideal para testigos de boda, bodas de plata, aniversarios o agradecimientos especiales. Incluye figura en forma de corazón fabricada en doble capa (MDF lacado en blanco y base en contraste) con ilustración personalizada a partir de vuestra fotografía y dedicatoria grabada a láser, acompañada de su base-estante de mesa y bolígrafo de bambú grabado a juego. (Nota: Caja de presentación no incluida en el precio base; puedes solicitar envoltorio especial de regalo bajo un posible pequeño suplemento).",
+        material: "MDF lacado en blanco",
+        tematica: ["eventos", "decoración"],
+        imagenes: [
+            "img/regaloBodasPlata.jpeg",
+            "img/regaloBodasPlataEnvuelto.jpeg"
         ]
     }
+    
 ];
