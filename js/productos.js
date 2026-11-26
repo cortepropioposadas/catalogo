@@ -653,5 +653,17 @@ const productos = [
             "img/cumpleMes1.jpeg",
             "img/cumpleMes7.jpeg"
         ]
+    },
+    {
+        id: 51,
+        titulo: "Bola de navidad inicial, en relieve, y nombre (doble capa)",
+        precioUnidad: 5.50,
+        precioPack: "Pack familia (4 unidades): 5.00€/ud",
+        descripcion: "Adorno navideño de diseño exclusivo fabricado en doble capa para lograr un elegante efecto 3D en relieve. Combina una base de madera MDF con el aro exterior y la letra inicial superpuestos en MDF lacado en blanco, junto al nombre grabado a láser. Un detalle sofisticado y duradero para personalizar el árbol de toda la familia. Diámetro: 8 cm.",
+        material: "MDF y MDF lacado en blanco (doble capa)",
+        tematica: ["navidad"],
+        imagenes: [
+            "img/bolaNombreInicial.jpeg""
+        ]
     }
 ];
