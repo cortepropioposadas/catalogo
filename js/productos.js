@@ -51,7 +51,6 @@ const productos = [
         tematica: ["navidad"],
         imagenes: [
             "img/bolanavidadpersonalizada2.jpg",
-            "img/bolaNombreInicial.jpeg",
             "img/bolanavidadpersonalizada3.jpg",
             "img/bolanavidadpersonalizada4.jpg"
         ]
