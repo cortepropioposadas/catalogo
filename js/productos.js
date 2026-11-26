@@ -48,7 +48,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Adorno de navidad personalizable con el nombre que elijas y un elegante diseño. Ideal para darle un toque único y especial a la decoración de tu árbol. Diámetro: 9 cm.",
         material: "MDF",
-        tematica: ["navidad"],
+        tematica: ["navidad", "decoración"],
         imagenes: [
             "img/bolanavidadpersonalizada2.jpg",
             "img/bolanavidadpersonalizada3.jpg",
@@ -104,7 +104,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Nombre decorativo de madera, perfecto para habitaciones infantiles, mesas dulces o eventos. Se entrega al natural, ideal para que puedas pintarlo o decorarlo a tu gusto. Tipografía y medidas 100% personalizables. Tamaño de referencia: 25 cm de largo.",
         material: "MDF",
-        tematica: ["decoración", "eventos"],
+        tematica: ["decoración", "eventos", "bebe"],
         imagenes: [
             "img/nombre.jpg",
             "img/nombre1.jpg",
@@ -218,7 +218,7 @@ const productos = [
         precioUnidad: 4.50,
         precioPack: " ",
         descripcion: "Un diseño moderno, resistente y con un acabado elegante. El tamaño aproximado es de 4 cm, ajustándose proporcionalmente a la cantidad de letras del nombre.",
-        material: "METACRILATO",
+        material: "Metacrilato",
         tematica: ["llaveros"],
         imagenes: [
             "img/llaveronombresimplemetraquilato.jpg",
@@ -242,7 +242,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Tablero de ajedrez clásico con cuadrícula y coordenadas grabadas a láser. Ideal para amantes de los juegos de mesa tradicionales. (Nota: El tamaño exacto está pendiente de confirmación. Las piezas no están incluidas en el precio base; consultar disponibilidad y precio del juego completo).",
         material: "MDF",
-        tematica: ["Juegos de mesa"],
+        tematica: ["juegos de mesa"],
         imagenes: [
             "img/tableroajedez.jpg",
             "img/tableroajedez1.jpg"
@@ -344,7 +344,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Exhibidor de medallas de madera, ideal para que los campeones de la casa luzcan sus logros. Personalizable con el nombre y la silueta del deporte o afición que prefieras (fútbol, gimnasia, ciclismo...). Un regalo original para motivar y decorar. Tamaño aproximado: 40 cm de ancho.",
         material: "MDF",
-        tematica: ["decoración"],
+        tematica: ["decoración", "deportes"],
         imagenes: [
             "img/medallero1.jpg",
             "img/medallero2.jpg"
@@ -357,7 +357,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Un detalle elegante, clásico y muy nuestro para bodas, aniversarios o eventos especiales. Opciones: Solo texto (11€/ud) | Imagen sencilla + nombre (15€/ud).",
         material: "Cristal",
-        tematica: ["eventos","decoración", "Cristalería"],
+        tematica: ["eventos","cristalería"],
         imagenes: [
             "img/catavinos.jpg"
         ]
@@ -410,7 +410,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Incluye mando a distancia para controlar los colores. Funciona mediante cable USB (incluido, sin cabezal) o con pilas (no incluidas). Base disponible en color negro o blanco según stock. ¿Quieres ir un paso más allá? Hacemos grabados 100% personalizados a partir de fotografías (consultar precio).",
         material: "Metracrilato y base LED (RGB)",
-        tematica: ["eventos", "decoración", "profesores", "graduación"],
+        tematica: ["eventos", "decoración", "graduación"],
         imagenes: [
             "img/lampara1.jpg",
             "img/lampara2.jpg"
@@ -423,7 +423,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Precioso marco de fotos de mesa personalizado con los datos de nacimiento del bebé (nombre, fecha, peso y altura). Un recuerdo único, emotivo y 100% modificable a tu gusto. Diseñado para colocar una fotografía estándar de 10x15 cm. Tamaño total aproximado: 25 cm de ancho.",
         material: "MDF",
-        tematica: ["bebe"],
+        tematica: ["bebe", "decoración"],
         imagenes: [
             "img/cuadrobautizodatos.jpg"
         ]
@@ -459,7 +459,7 @@ const productos = [
         precioPack: "Consultar descuentos por cantidad para clases.",
         descripcion: "Marco portafotos con base de mesa, el recuerdo ideal para celebrar el fin de etapa escolar. Fabricación artesanal con bordes y esquinas lijados a mano para un acabado extra suave. Cuenta con ranura superior para introducir la fotografía fácilmente. La foto tiene un tamaño de 6,5cm de alto y 5cm ancho. Opciones: Genérica sin nombre (10,00€/ud) | Grabado frontal personalizado (12,00€/ud) | Grabado a doble cara con dedicatoria en el reverso (14,00€/ud).",
         material: "MDF",
-        tematica: ["eventos", "profesores", "decoración"],
+        tematica: ["eventos", "profesores", "decoración","graduación"],
         imagenes: [
             "img/portafotograduacion.jpeg",
             "img/portafotograduacion1.jpeg",
@@ -474,7 +474,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Placa de madera con grabado láser de alta definición de estilo cofrade. Ideal para regalar o decorar. Disponemos de varios diseños (Cristo, Virgen, Nazareno...) y podemos personalizarlo con la imagen del titular de tu hermandad bajo pedido (preguntar posible suplemento). Se puede colgar o apoyar. Tamaño aproximado: 17cm de alto y 12cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa"],
+        tematica: ["semana santa","decoración"],
         imagenes: [
             "img/cuadrocristo.jpeg",
             "img/cuadronazareno.jpeg",
@@ -488,7 +488,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño.",
         descripcion: "Ideal para presidir una habitación, un altar o como regalo de gran valor para cofrades. Su gran tamaño permite apreciar cada sombra y detalle de la imagen. Personalizable con el titular de tu hermandad bajo pedido (preguntar posible suplemento de diseño). Tamaño: 27,5 cm de alto y 19,5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa"],
+        tematica: ["semana santa","decoración"],
         imagenes: [
             "img/cuadrovirgengrande.jpeg",
             "img/cuadrovirgengrande1.jpeg"
@@ -501,7 +501,7 @@ const productos = [
         precioPack: " +10 unidades -5%",
         descripcion: "Incorpora un orificio superior, ideal para usar como llavero o colgante para el coche. Diseños disponibles: Cristo, Virgen y Nazareno. Tamaño: 6,5 cm de alto y 5 cm de ancho.",
         material: "MDF",
-        tematica: ["Semana santa", "llaveros"],
+        tematica: ["semana santa", "llaveros"],
         imagenes: [
             "img/cuadrollaverovirgen.jpeg",
             "img/cuadrollaveronazareno.jpeg",
@@ -527,7 +527,7 @@ const productos = [
         precioPack: "Consultar precio para réplicas en otro tamaño, o grosor.",
         descripcion: "Simpáticas figuras de elfos/gnomos con estrellas y detalles para decorar cualquier rincón. El de la imagen mide unos 11 cm.",
         material: "MDF",
-        tematica: ["navidad"],
+        tematica: ["navidad","decoración"],
         imagenes: [
             "img/elfo.jpeg", 
             "img/elfos.jpeg", 
@@ -541,7 +541,7 @@ const productos = [
         precioPack: "Preguntar precio por modelo y personalización, entre 9-12€",
         descripcion: "Colgador de puerta 'Querido Santa' con silueta de casitas y llave mágica.",
         material: "MDF o MDF lacado en blanco",
-        tematica: ["navidad"],
+        tematica: ["navidad","decoración"],
         imagenes: [
             "img/marcapuerta.jpeg", 
             "img/llavePapaNoel.jpeg"
@@ -567,7 +567,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Bandeja de madera aprox. 30x20 cm para dejar las galletas, leche y zanahorias.",
         material: "MDF o MDF lacado en blanco",
-        tematica: ["navidad"],
+        tematica: ["navidad","decoración"],
         imagenes: [
             "img/bandejaPapaNoel.jpeg", 
             "img/bandejaReyes.jpeg"
@@ -605,7 +605,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Cartel de MDF con la divertida silueta de un gorro de elfo en la parte superior y el grabado 'Un mensaje de tu Elfo'. Cuenta con una superficie blanca central tipo pizarra o panel para escribir notas personalizadas de los elfos cada mañana. Tamaño: 24x20 cm.",
         material: "MDF",
-        tematica: ["navidad"],
+        tematica: ["navidad","decoración"],
         imagenes: [
             "img/pizarraElfo.jpeg"
         ]
@@ -615,7 +615,7 @@ const productos = [
         titulo: "Postal mágica del Elfo",
         precioUnidad: 10.50,
         precioPack: " ",
-        descripcion: "Postal de MDF grabada a áser simulando un envio oficial desde el Polo Norte. El texto incluye un divertido mensaje del elfo espía avisando de que vigila si se portan bien. Tamaño: 21x14 cm. Posibles modificaciones a la imagen de base, con un posible suplemento.",
+        descripcion: "Postal de MDF grabada a láser simulando un envio oficial desde el Polo Norte. El texto incluye un divertido mensaje del elfo espía avisando de que vigila si se portan bien. Tamaño: 21x14 cm. Posibles modificaciones a la imagen de base, con un posible suplemento.",
         material: "MDF",
         tematica: ["navidad"],
         imagenes: [
@@ -636,7 +636,7 @@ const productos = [
     },
     {
         id: 50,
-        titulo: "Set discos cumplemes bebé persobalizados (11 piezas)",
+        titulo: "Set discos cumplemes bebé personalizados (11 piezas)",
         precioUnidad: 28.00,
         precioPack: "Consultar suplemento para grabar la bola extra o por más piezas.",
         descripcion: "Set completo de 11 discos de madera grabados a doble cara para inmortalizar el primer año del bebé. Incluye: 1 disco con dedicatoria personalizada y nuestro sello detrás, 1 disco de bienvenida ('Hola soy [Nombre]') con los datos de nacimiento en el reverso, 6 discos con los 12 meses ('1 mes' a 'Mi primer añito'), 2 discos con 4 hitos especiales ('Asoma mi primer diente', 'Mi primera Navidad', 'Con los abuelos' y 'Mi primer Carnaval') y 1 disco en blanco para escribir con rotulador acrílico (no incluido). ¡Los hitos son 100% modificables a tu gusto y el disco extra puede ir grabado por un pequeño suplemento!",
