@@ -620,5 +620,17 @@ const productos = [
         imagenes: [
             "img/postalElfo.jpeg"
         ]
+    },
+    {
+        id: 49,
+        titulo: "Escudo de fútbol decorativo para pared",
+        precioUnidad: 20.00,
+        precioPack: "Consultar precio para tamaños superiores (40-50 cm)",
+        descripcion: "Silueta de pared de tu equipo de fútbol favorito fabricada mediante corte láser de alta precisión. Su acabado en negro mate aporta un toque moderno, minimalista y elegante a cualquier habitación, salón o zona gamer. Personalizable con el escudo del club que elijas (Betis, Sevilla, Real Madrid, Barça, equipos locales...). Tamaño aproximado: 30x30 cm (varía proporcionalmente según la forma del escudo).",
+        material: "MDF negro",
+        tematica: ["decoración", "deportes"],
+        imagenes: [
+            "img/escudoParedFutbol.jpeg"
+        ]
     }
 ];
