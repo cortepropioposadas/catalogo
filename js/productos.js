@@ -422,7 +422,7 @@ const productos = [
         precioPack: " ",
         descripcion: "Precioso marco de fotos de mesa personalizado con los datos de nacimiento del bebé (nombre, fecha, peso y altura). Un recuerdo único, emotivo y 100% modificable a tu gusto. Diseñado para colocar una fotografía estándar de 10x15 cm. Tamaño total aproximado: 25 cm de ancho.",
         material: "MDF",
-        tematica: ["eventos", "decoración"],
+        tematica: ["bebe"],
         imagenes: [
             "img/cuadrobautizodatos.jpg"
         ]
@@ -631,6 +631,27 @@ const productos = [
         tematica: ["decoración", "deportes"],
         imagenes: [
             "img/escudoParedFutbol.jpeg"
+        ]
+    },
+    {
+        id: 50,
+        titulo: "Set discos cumplemes bebé persobalizados (11 piezas)",
+        precioUnidad: 28.00,
+        precioPack: "Consultar suplemento para grabar la bola extra o por más piezas.",
+        descripcion: "Set completo de 11 discos de madera grabados a doble cara para inmortalizar el primer año del bebé. Incluye: 1 disco con dedicatoria personalizada y nuestro sello detrás, 1 disco de bienvenida ('Hola soy [Nombre]') con los datos de nacimiento en el reverso, 6 discos con los 12 meses ('1 mes' a 'Mi primer añito'), 2 discos con 4 hitos especiales ('Asoma mi primer diente', 'Mi primera Navidad', 'Con los abuelos' y 'Mi primer Carnaval') y 1 disco en blanco para escribir con rotulador acrílico (no incluido). ¡Los hitos son 100% modificables a tu gusto y el disco extra puede ir grabado por un pequeño suplemento!",
+        material: "Madera natural (contrachapado / MDF)",
+        tematica: ["bebe"],
+        imagenes: [
+            "img/cumpleMes9.jpeg",
+            "img/cumpleMes10.jpeg",
+            "img/cumpleMes8.jpeg",
+            "img/cumpleMes6.jpeg",
+            "img/cumpleMes5.jpeg",
+            "img/cumpleMes4.jpeg",
+            "img/cumpleMes3.jpeg",
+            "img/cumpleMes2.jpeg",
+            "img/cumpleMes1.jpeg",
+            "img/cumpleMes7.jpeg"
         ]
     }
 ];
