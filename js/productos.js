@@ -719,6 +719,18 @@ const productos = [
             "img/regaloBodasPlata.jpeg",
             "img/regaloBodasPlataEnvuelto.jpeg"
         ]
+    },
+    {
+        id: 56,
+        titulo: "Bola cuenta atrás para Navidad interactiva con ruleta",
+        precioUnidad: 10.00,
+        precioPack: " ",
+        descripcion: "Adorno navideño interactivo de 3 capas en MDF lacado en blanco con ruleta giratoria para llevar la cuenta atrás hasta Navidad día a día. Cuenta con diseño de Papá Noel sosteniendo un regalo, ventana superior con el número visible, grabado 'PARA NAVIDAD' con copos de nieve y pestaña inferior para girar la ruleta cómodamente. Bola de aprox. 9 cm de diámetro (algo más ancha en total por la silueta de Papá Noel). Ideal para colgar en el árbol o decorar en familia y crear un ritual diario con los peques.",
+        material: "MDF lacado en blanco (3 capas)",
+        tematica: ["decoración", "navidad"],
+        imagenes: [
+            "img/cuentaAtrasPapaNoel.jpeg"
+        ]
     }
     
 ];
